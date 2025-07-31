@@ -76,13 +76,13 @@ export const HeroSection = () => {
           {/* Right Column - Stats Cards with Truck Background */}
           <div className="relative space-y-6">
             <div
-              className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none"
+              className="absolute inset-0 flex items-center justify-end z-0 pointer-events-none select-none"
               style={{ opacity: 0.18 }}
             >
               <img
                 src={truckImage}
                 alt="Truck"
-                style={{ width: "2400px", height: "auto" }}
+                style={{ width: "5760px", height: "auto" }}
                 className="object-contain"
                 draggable={false}
               />
