@@ -23,10 +23,10 @@ const ParticleBackground = () => {
 
 const StatCard = ({ title, subtitle, glowColor }: { title: string; subtitle?: string; glowColor: string }) => {
   return (
-    <div className={`glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/5 backdrop-blur-md`} 
-         style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.2), 0 0 20px ${glowColor}15` }}>
-      <h3 className="text-lg font-bold text-cyber-gradient mb-2">{title}</h3>
-      {subtitle && <p className="text-sm text-muted-foreground/80">{subtitle}</p>}
+    <div className={`glass-card p-8 hover:scale-105 transition-all duration-300`} 
+         style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.1), 0 0 30px ${glowColor}20` }}>
+      <h3 className="text-2xl font-geist font-semibold text-cyber-gradient mb-3">{title}</h3>
+      {subtitle && <p className="text-base font-geist text-muted-foreground/90">{subtitle}</p>}
     </div>
   );
 };
@@ -56,7 +56,7 @@ export const HeroSection = () => {
               <h2 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
                 <span className="text-cyber-gradient">LOGBOOK S&S</span>
               </h2>
-              <p className="text-xl text-muted-foreground/60 max-w-lg">
+              <p className="text-2xl font-geist font-semibold max-w-lg" style={{ color: '#506FB2' }}>
                 Professional logistics support available around the clock. 
                 Your trusted partner for seamless transportation management.
               </p>

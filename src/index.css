@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,21 +20,25 @@
     --popover: 220 15% 8%;
     --popover-foreground: 0 0% 95%;
 
-    /* Cyber primary colors */
-    --primary: 193 100% 50%;
+    /* Cyber primary colors - brighter cyan */
+    --primary: 180 100% 60%;
     --primary-foreground: 220 25% 6%;
 
-    /* Neon secondary */
-    --secondary: 320 100% 70%;
+    /* Neon secondary - vibrant magenta */
+    --secondary: 315 100% 75%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Muted glass effects */
-    --muted: 220 15% 12%;
-    --muted-foreground: 0 0% 60%;
+    /* Muted effects - warmer tones */
+    --muted: 240 30% 15%;
+    --muted-foreground: 240 20% 70%;
 
-    /* Accent neon green */
-    --accent: 120 100% 50%;
+    /* Accent electric purple */
+    --accent: 270 100% 65%;
     --accent-foreground: 220 25% 6%;
+    
+    /* Bright orange accent */
+    --orange: 25 100% 60%;
+    --orange-foreground: 220 25% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -45,15 +50,17 @@
 
     --radius: 0.75rem;
 
-    /* Cyber gradients */
-    --gradient-cyber: linear-gradient(135deg, hsl(193 100% 50%), hsl(320 100% 70%));
+    /* Cyber gradients - more vibrant */
+    --gradient-cyber: linear-gradient(135deg, hsl(180 100% 60%), hsl(315 100% 75%), hsl(270 100% 65%));
     --gradient-dark: linear-gradient(180deg, hsl(220 25% 6%), hsl(220 30% 3%));
-    --gradient-glass: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    --gradient-glass: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    --gradient-card: linear-gradient(145deg, rgba(180, 255, 255, 0.06), rgba(255, 109, 217, 0.04));
     
-    /* Neon glows */
-    --glow-cyan: 0 0 40px hsl(193 100% 50% / 0.4);
-    --glow-pink: 0 0 40px hsl(320 100% 70% / 0.4);
-    --glow-green: 0 0 40px hsl(120 100% 50% / 0.4);
+    /* Neon glows - more intense */
+    --glow-cyan: 0 0 40px hsl(180 100% 60% / 0.5);
+    --glow-magenta: 0 0 40px hsl(315 100% 75% / 0.5);
+    --glow-purple: 0 0 40px hsl(270 100% 65% / 0.5);
+    --glow-orange: 0 0 40px hsl(25 100% 60% / 0.5);
     
     /* Shadows */
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -129,10 +136,10 @@
 }
 
 @layer components {
-  /* Glassmorphic card effect */
+  /* Glassmorphic card effect - almost transparent */
   .glass-card {
-    @apply bg-card/10 backdrop-blur-md border border-white/10 rounded-xl;
-    background: var(--gradient-glass);
+    @apply backdrop-blur-lg border border-white/5 rounded-xl;
+    background: var(--gradient-card);
     box-shadow: var(--shadow-glass);
   }
 
@@ -144,28 +151,33 @@
     background-clip: text;
   }
 
-  /* Cyber button variants */
+  /* Cyber button variants - transparent with glow */
   .btn-cyber {
-    @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300;
-    background: var(--gradient-cyber);
+    @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-md;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 109, 217, 0.15));
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--glow-cyan);
     transition: var(--transition-cyber);
   }
 
   .btn-cyber:hover {
     transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.25), rgba(255, 109, 217, 0.25));
     box-shadow: var(--glow-cyan), var(--shadow-elevated);
   }
 
   .btn-cyber-secondary {
-    @apply px-8 py-4 rounded-xl font-semibold bg-muted border border-border text-foreground transition-all duration-300;
+    @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-md text-foreground;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: var(--transition-cyber);
   }
 
   .btn-cyber-secondary:hover {
-    @apply bg-muted/80 border-primary/50;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-glass);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid hsl(var(--primary) / 0.3);
+    box-shadow: var(--glow-cyan);
   }
 
   /* Floating badge */
@@ -208,6 +220,10 @@
 @layer utilities {
   .font-inter {
     font-family: 'Inter', sans-serif;
+  }
+  
+  .font-geist {
+    font-family: 'Geist', sans-serif;
   }
 }
 
