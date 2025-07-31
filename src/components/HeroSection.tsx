@@ -1,0 +1,109 @@
+import { Button } from "@/components/ui/button";
+import heroBackground from "@/assets/hero-background.jpg";
+
+const ParticleBackground = () => {
+  return (
+    <div className="particles">
+      {[...Array(20)].map((_, i) => (
+        <div
+          key={i}
+          className="particle"
+          style={{
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 20}s`,
+            animationDuration: `${15 + Math.random() * 10}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+const StatCard = ({ title, subtitle, glowColor }: { title: string; subtitle?: string; glowColor: string }) => {
+  return (
+    <div className={`glass-card p-6 hover:scale-105 transition-all duration-300`} 
+         style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px ${glowColor}20` }}>
+      <h3 className="text-lg font-bold text-cyber-gradient mb-2">{title}</h3>
+      {subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>}
+    </div>
+  );
+};
+
+export const HeroSection = () => {
+  return (
+    <section className="min-h-screen relative overflow-hidden flex items-center">
+      {/* Background with hero image overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
+      
+      {/* Particle animation */}
+      <ParticleBackground />
+      
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Floating 24/7 Badge */}
+        <div className="flex justify-center mb-8">
+          <div className="badge-float">
+            24/7
+          </div>
+        </div>
+        
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Hero Text */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-6xl lg:text-8xl font-black uppercase tracking-tight">
+                <span className="text-cyber-gradient">DYSTINCT</span>
+              </h1>
+              <h2 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
+                <span className="text-cyber-gradient">LOGBOOK S&S</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-lg">
+                Professional logistics support available around the clock. 
+                Your trusted partner for seamless transportation management.
+              </p>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button variant="cyber" size="lg" className="text-lg">
+                Contact
+              </Button>
+              <Button variant="cyber-secondary" size="lg" className="text-lg">
+                Get Started
+              </Button>
+            </div>
+          </div>
+          
+          {/* Right Column - Stats Cards */}
+          <div className="space-y-6">
+            <StatCard 
+              title="500+ Satisfied Drivers" 
+              glowColor="rgb(0, 207, 255)"
+            />
+            <StatCard 
+              title="100+ Audits Passed" 
+              glowColor="rgb(255, 109, 217)"
+            />
+            <StatCard 
+              title="24/7 Service" 
+              subtitle="Round-the-clock support for all your logistics needs"
+              glowColor="rgb(0, 255, 0)"
+            />
+          </div>
+        </div>
+        
+        {/* Status Bar */}
+        <div className="flex items-center justify-center mt-16 space-x-3">
+          <div className="status-online"></div>
+          <p className="text-muted-foreground text-sm">
+            Professional. Reliable. Available 24/7.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
