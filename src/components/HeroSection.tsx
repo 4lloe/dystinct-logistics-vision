@@ -1,5 +1,7 @@
 
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import truckImage from "@/assets/truck.png";
 
 const ParticleBackground = () => {
   return (
@@ -21,15 +23,17 @@ const ParticleBackground = () => {
 
 const StatCard = ({ title, subtitle, glowColor }: { title: string; subtitle?: string; glowColor: string }) => {
   return (
-    <div className={`glass-card p-6 hover:scale-105 transition-all duration-300`} 
+    <div className={`glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md`} 
          style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px ${glowColor}20` }}>
       <h3 className="text-lg font-bold text-cyber-gradient mb-2">{title}</h3>
-      {subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>}
+      {subtitle && <p className="text-sm text-muted-foreground/80">{subtitle}</p>}
     </div>
   );
 };
 
 export const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="min-h-screen relative overflow-hidden flex items-center">
       {/* Dark gradient background with green-cyan-purple colors */}
@@ -52,7 +56,7 @@ export const HeroSection = () => {
               <h2 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
                 <span className="text-cyber-gradient">LOGBOOK S&S</span>
               </h2>
-              <p className="text-xl text-muted-foreground max-w-lg">
+              <p className="text-xl text-muted-foreground/60 max-w-lg">
                 Professional logistics support available around the clock. 
                 Your trusted partner for seamless transportation management.
               </p>
@@ -60,30 +64,42 @@ export const HeroSection = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cyber" size="lg" className="text-lg">
+              <Button variant="cyber" size="lg" className="text-lg" onClick={() => navigate('/contact')}>
                 Contact
               </Button>
-              <Button variant="cyber-secondary" size="lg" className="text-lg">
-                Get Started
+              <Button variant="cyber-secondary" size="lg" className="text-lg" onClick={() => navigate('/more-info')}>
+                More Info
               </Button>
             </div>
           </div>
           
-          {/* Right Column - Stats Cards */}
-          <div className="space-y-6">
-            <StatCard 
-              title="500+ Satisfied Drivers" 
-              glowColor="rgb(0, 207, 255)"
-            />
-            <StatCard 
-              title="100+ Audits Passed" 
-              glowColor="rgb(255, 109, 217)"
-            />
-            <StatCard 
-              title="24/7 Service" 
-              subtitle="Round-the-clock support for all your logistics needs"
-              glowColor="rgb(0, 255, 0)"
-            />
+          {/* Right Column - Stats Cards with Truck Background */}
+          <div className="relative space-y-6">
+            {/* Truck Background */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-20 z-0">
+              <img 
+                src={truckImage} 
+                alt="Truck" 
+                className="w-full max-w-md object-contain"
+              />
+            </div>
+            
+            {/* Stats Cards */}
+            <div className="relative z-10 space-y-6">
+              <StatCard 
+                title="500+ Satisfied Drivers" 
+                glowColor="rgb(0, 207, 255)"
+              />
+              <StatCard 
+                title="100+ Audits Passed" 
+                glowColor="rgb(255, 109, 217)"
+              />
+              <StatCard 
+                title="24/7 Service" 
+                subtitle="Round-the-clock support for all your logistics needs"
+                glowColor="rgb(0, 255, 0)"
+              />
+            </div>
           </div>
         </div>
         
