@@ -101,7 +101,12 @@ export const HeroSection = () => {
               
               {/* Action Buttons */}
               <div className="space-y-4 mt-8">
-                <Button variant="default" size="lg" className="w-full bg-white text-black hover:bg-white/90 font-semibold animate-[neon-glow_2s_ease-in-out_infinite]" onClick={() => navigate('/contact')}>
+                <Button variant="default" size="lg" className="w-full font-semibold text-white border-0" 
+                        style={{ 
+                          background: 'var(--gradient-cyber)',
+                          boxShadow: '0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(255, 109, 217, 0.3), 0 0 60px rgba(153, 102, 255, 0.2)'
+                        }}
+                        onClick={() => navigate('/contact')}>
                   Contact
                 </Button>
                 <div className="grid grid-cols-3 gap-4">
