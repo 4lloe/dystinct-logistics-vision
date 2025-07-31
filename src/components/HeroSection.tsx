@@ -56,7 +56,7 @@ export const HeroSection = () => {
               <h2 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
                 <span className="text-cyber-gradient">LOGBOOK S&S</span>
               </h2>
-              <p className="text-2xl font-geist font-semibold max-w-lg text-muted-foreground">
+              <p className="text-2xl font-geist font-light max-w-lg text-muted-foreground">
                 Professional logistics support available around the clock. 
                 Your trusted partner for seamless transportation management.
               </p>
@@ -101,7 +101,7 @@ export const HeroSection = () => {
               
               {/* Action Buttons */}
               <div className="space-y-4 mt-8">
-                <Button variant="default" size="lg" className="w-full bg-white text-black hover:bg-white/90 font-semibold" onClick={() => navigate('/contact')}>
+                <Button variant="default" size="lg" className="w-full bg-white text-black hover:bg-white/90 font-semibold animate-[neon-glow_2s_ease-in-out_infinite]" onClick={() => navigate('/contact')}>
                   Contact
                 </Button>
                 <div className="grid grid-cols-3 gap-4">
