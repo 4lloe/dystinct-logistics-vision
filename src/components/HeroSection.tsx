@@ -78,18 +78,18 @@ export const HeroSection = () => {
             {/* Truck Background */}
             <div className="absolute -top-80 left-1/2 -translate-x-1/2 z-0 pointer-events-none select-none"
               style={{ width: "1200px", height: "auto", opacity: 0.18 }}>
-            <div
-              className="absolute inset-0 flex items-center justify-end z-0 pointer-events-none select-none"
-              style={{ opacity: 0.18 }}
-            >
-              <img
-                src={truckImage}
-                alt="Truck"
-                className="w-full h-auto object-contain"
-                style={{ width: "5760px", height: "auto" }}
-                className="object-contain"
-                draggable={false}
-              />
+              <div
+                className="absolute inset-0 flex items-center justify-end z-0 pointer-events-none select-none"
+                style={{ opacity: 0.18 }}
+              >
+                <img
+                  src={truckImage}
+                  alt="Truck"
+                  className="w-full h-auto object-contain"
+                  style={{ width: "5760px", height: "auto" }}
+                  draggable={false}
+                />
+              </div>
             </div>
             
             {/* Stats Cards */}
