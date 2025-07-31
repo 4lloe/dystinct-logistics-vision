@@ -101,7 +101,7 @@ export const HeroSection = () => {
               
               {/* Action Buttons */}
               <div className="space-y-4 mt-8">
-                <Button variant="default" size="lg" className="w-full font-semibold text-white border-0" 
+                <Button variant="default" size="lg" className="w-full font-semibold text-white border-0 uppercase" 
                         style={{ 
                           background: 'var(--gradient-cyber)',
                           boxShadow: '0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(255, 109, 217, 0.3), 0 0 60px rgba(153, 102, 255, 0.2)'
@@ -110,13 +110,19 @@ export const HeroSection = () => {
                   Contact
                 </Button>
                 <div className="grid grid-cols-3 gap-4">
-                  <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/our-services')}>
+                  <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
+                          style={{ background: 'var(--gradient-card)' }}
+                          onClick={() => navigate('/our-services')}>
                     Our Services
                   </Button>
-                  <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/price-list')}>
+                  <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
+                          style={{ background: 'var(--gradient-card)' }}
+                          onClick={() => navigate('/price-list')}>
                     Price List
                   </Button>
-                  <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/faq')}>
+                  <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
+                          style={{ background: 'var(--gradient-card)' }}
+                          onClick={() => navigate('/faq')}>
                     FAQ
                   </Button>
                 </div>
