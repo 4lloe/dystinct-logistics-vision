@@ -76,7 +76,7 @@ export const HeroSection = () => {
           {/* Right Column - Stats Cards with Truck Background */}
           <div className="relative space-y-6">
             {/* Truck Background */}
-            <div className="absolute -top-80 left-1/2 -translate-x-1/2 z-0 pointer-events-none select-none"
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none select-none"
               style={{ width: "1200px", height: "auto", opacity: 0.18 }}>
               <div
                 className="absolute inset-0 flex items-center justify-end z-0 pointer-events-none select-none"
@@ -112,7 +112,7 @@ export const HeroSection = () => {
         </div>
         
         {/* Status Bar */}
-        <div className="flex items-center justify-center mt-16 space-x-3">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center space-x-3">
           <div className="status-online"></div>
           <p className="text-muted-foreground text-sm">
             Professional. Reliable. Available 24/7.
