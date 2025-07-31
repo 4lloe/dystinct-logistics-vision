@@ -100,19 +100,21 @@ export const HeroSection = () => {
               />
               
               {/* Action Buttons */}
-              <div className="grid grid-cols-2 gap-4 mt-8">
-                <Button variant="cyber" size="lg" onClick={() => navigate('/contact')}>
+              <div className="space-y-4 mt-8">
+                <Button variant="cyber" size="lg" className="w-full" onClick={() => navigate('/contact')}>
                   Contact
                 </Button>
-                <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/our-services')}>
-                  Our Services
-                </Button>
-                <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/price-list')}>
-                  Price List
-                </Button>
-                <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/faq')}>
-                  FAQ
-                </Button>
+                <div className="grid grid-cols-3 gap-4">
+                  <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/our-services')}>
+                    Our Services
+                  </Button>
+                  <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/price-list')}>
+                    Price List
+                  </Button>
+                  <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/faq')}>
+                    FAQ
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
