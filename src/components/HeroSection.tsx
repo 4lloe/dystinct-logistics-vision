@@ -23,8 +23,8 @@ const ParticleBackground = () => {
 
 const StatCard = ({ title, subtitle, glowColor }: { title: string; subtitle?: string; glowColor: string }) => {
   return (
-    <div className={`glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md`} 
-         style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px ${glowColor}20` }}>
+    <div className={`glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/5 backdrop-blur-md`} 
+         style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.2), 0 0 20px ${glowColor}15` }}>
       <h3 className="text-lg font-bold text-cyber-gradient mb-2">{title}</h3>
       {subtitle && <p className="text-sm text-muted-foreground/80">{subtitle}</p>}
     </div>
