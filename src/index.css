@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -159,19 +158,14 @@
   }
 
   .btn-cyber-secondary {
-    @apply px-8 py-4 rounded-xl font-semibold text-foreground transition-all duration-300;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(0, 207, 255, 0.1);
+    @apply px-8 py-4 rounded-xl font-semibold bg-muted border border-border text-foreground transition-all duration-300;
     transition: var(--transition-cyber);
   }
 
   .btn-cyber-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 207, 255, 0.3);
+    @apply bg-muted/80 border-primary/50;
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 207, 255, 0.2), var(--shadow-glass);
+    box-shadow: var(--shadow-glass);
   }
 
   /* Floating badge */
@@ -214,10 +208,6 @@
 @layer utilities {
   .font-inter {
     font-family: 'Inter', sans-serif;
-  }
-  
-  .font-geist {
-    font-family: 'Geist', sans-serif;
   }
 }
 
