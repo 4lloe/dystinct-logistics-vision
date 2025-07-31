@@ -75,15 +75,13 @@ export const HeroSection = () => {
           
           {/* Right Column - Stats Cards with Truck Background */}
           <div className="relative space-y-6">
-            <div
-              className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none"
-              style={{ opacity: 0.18 }}
-            >
+            {/* Truck Background */}
+            <div className="absolute -top-80 left-1/2 -translate-x-1/2 z-0 pointer-events-none select-none"
+              style={{ width: "1200px", height: "auto", opacity: 0.18 }}>
               <img
                 src={truckImage}
                 alt="Truck"
-                style={{ width: "2400px", height: "auto" }}
-                className="object-contain"
+                className="w-full h-auto object-contain"
                 draggable={false}
               />
             </div>
