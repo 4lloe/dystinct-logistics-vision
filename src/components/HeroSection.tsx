@@ -62,15 +62,6 @@ export const HeroSection = () => {
               </p>
             </div>
             
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cyber" size="lg" className="text-lg" onClick={() => navigate('/contact')}>
-                Contact
-              </Button>
-              <Button variant="cyber-secondary" size="lg" className="text-lg" onClick={() => navigate('/more-info')}>
-                More Info
-              </Button>
-            </div>
           </div>
           
           {/* Right Column - Stats Cards with Truck Background */}
@@ -107,6 +98,22 @@ export const HeroSection = () => {
                 subtitle="Round-the-clock support for all your logistics needs"
                 glowColor="rgb(0, 255, 0)"
               />
+              
+              {/* Action Buttons */}
+              <div className="grid grid-cols-2 gap-4 mt-8">
+                <Button variant="cyber" size="lg" onClick={() => navigate('/contact')}>
+                  Contact
+                </Button>
+                <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/our-services')}>
+                  Our Services
+                </Button>
+                <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/price-list')}>
+                  Price List
+                </Button>
+                <Button variant="cyber-secondary" size="lg" onClick={() => navigate('/faq')}>
+                  FAQ
+                </Button>
+              </div>
             </div>
           </div>
         </div>
