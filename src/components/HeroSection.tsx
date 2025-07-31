@@ -1,5 +1,5 @@
+
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-background.jpg";
 
 const ParticleBackground = () => {
   return (
@@ -32,24 +32,15 @@ const StatCard = ({ title, subtitle, glowColor }: { title: string; subtitle?: st
 export const HeroSection = () => {
   return (
     <section className="min-h-screen relative overflow-hidden flex items-center">
-      {/* Background with hero image overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
+      {/* Dark gradient background with green-cyan-purple colors */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-green-900/30 to-purple-900/40" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 via-transparent to-green-800/20" />
+      <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-purple-900/30 to-slate-800" />
       
       {/* Particle animation */}
       <ParticleBackground />
       
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Floating 24/7 Badge */}
-        <div className="flex justify-center mb-8">
-          <div className="badge-float">
-            24/7
-          </div>
-        </div>
-        
+      <div className="container mx-auto px-6 relative z-10">        
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Hero Text */}
