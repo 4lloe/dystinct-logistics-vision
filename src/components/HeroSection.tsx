@@ -35,7 +35,25 @@ export const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="min-h-screen relative overflow-hidden flex items-center">
+    <>
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-center space-x-8">
+            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">
+              Our Services
+            </a>
+            <a href="#pricing" className="text-foreground hover:text-primary transition-colors font-medium">
+              Price List
+            </a>
+            <a href="#faq" className="text-foreground hover:text-primary transition-colors font-medium">
+              FAQ
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <section className="min-h-screen relative overflow-hidden flex items-center pt-20">
       {/* Dark gradient background with green-cyan-purple colors */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-green-900/30 to-purple-900/40" />
       <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 via-transparent to-green-800/20" />
@@ -120,5 +138,6 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
