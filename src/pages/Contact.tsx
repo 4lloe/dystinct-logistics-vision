@@ -62,15 +62,15 @@ const Contact = () => {
             </CardHeader>
             <CardContent className="text-center">
               {!showPhoneNumbers ? (
-                <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => setShowPhoneNumbers(true)}>
+                <Button variant="cyber" className="w-full text-white" onClick={() => setShowPhoneNumbers(true)}>
                   Call Now
                 </Button>
               ) : (
                 <div className="space-y-2">
-                  <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+13314549901')}>
+                  <Button variant="cyber" className="w-full text-white" onClick={() => window.open('tel:+13314549901')}>
                     Call 🇺🇸 +1 (331) 454-9901
                   </Button>
-                  <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+37376500222')}>
+                  <Button variant="cyber" className="w-full text-white" onClick={() => window.open('tel:+37376500222')}>
                     Call 🇲🇩 +373 76500222
                   </Button>
                 </div>
@@ -86,7 +86,7 @@ const Contact = () => {
               <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
+              <Button variant="cyber" className="w-full text-white" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
                 Send Email
               </Button>
             </CardContent>
@@ -100,7 +100,7 @@ const Contact = () => {
               <CardDescription className="text-muted-foreground/80">Instant messaging with our support team via Telegram</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('https://t.me/+37376500222')}>
+              <Button variant="cyber" className="w-full text-white" onClick={() => window.open('https://t.me/+37376500222')}>
                 Start Chat
               </Button>
             </CardContent>
@@ -143,7 +143,7 @@ const Contact = () => {
 
         {/* Back Button */}
         <div className="text-center mt-16">
-          <Button variant="cyber-secondary" size="lg" onClick={() => window.location.href = '/pricelist'}>
+          <Button variant="cyber-secondary" size="lg" className="text-white" onClick={() => window.location.href = '/pricelist'}>
             PRICELIST VIEW
           </Button>
         </div>
