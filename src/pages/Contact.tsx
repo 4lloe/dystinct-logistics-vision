@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MessageSquare, MapPin, Clock } from "lucide-react";
@@ -31,6 +32,7 @@ const ContactOption = ({
 };
 
 const Contact = () => {
+  const [showPhoneNumbers, setShowPhoneNumbers] = useState(false);
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Dark gradient background */}
@@ -58,13 +60,21 @@ const Contact = () => {
               <CardTitle className="text-cyber-gradient">Phone Call</CardTitle>
               <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
             </CardHeader>
-            <CardContent className="text-center space-y-2">
-              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+13314549901')}>
-                Call +1 (331) 454-9901
-              </Button>
-              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+37376500222')}>
-                Call +373 76500222
-              </Button>
+            <CardContent className="text-center">
+              {!showPhoneNumbers ? (
+                <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => setShowPhoneNumbers(true)}>
+                  Call Now
+                </Button>
+              ) : (
+                <div className="space-y-2">
+                  <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+13314549901')}>
+                    Call 🇺🇸 +1 (331) 454-9901
+                  </Button>
+                  <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+37376500222')}>
+                    Call 🇲🇩 +373 76500222
+                  </Button>
+                </div>
+              )}
             </CardContent>
           </Card>
           
@@ -110,7 +120,7 @@ const Contact = () => {
               <p className="text-muted-foreground/80">
                 38 S BLUE ANGEL PKWY<br />
                 PENSACOLA, FL 32506<br />
-                United States
+                UNITED STATES
               </p>
             </CardContent>
           </Card>
