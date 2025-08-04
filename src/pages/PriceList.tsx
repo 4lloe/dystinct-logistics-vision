@@ -38,16 +38,16 @@ const ServiceCard = ({
           <div className="mt-6">
             <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Available via:</h4>
             <div className="flex justify-center gap-6">
-              <div className="flex flex-col items-center gap-2">
-                <Phone className="w-8 h-8 text-cyan-400" />
+              <div className="flex flex-col items-center gap-2 cursor-pointer">
+                <Phone className="w-8 h-8 text-cyan-400 hover:scale-125 transition-transform duration-300" />
                 <span className="text-xs text-muted-foreground">Phone</span>
               </div>
-              <div className="flex flex-col items-center gap-2">
-                <MessageSquare className="w-8 h-8 text-green-400" />
+              <div className="flex flex-col items-center gap-2 cursor-pointer">
+                <MessageSquare className="w-8 h-8 text-green-400 hover:scale-125 transition-transform duration-300" />
                 <span className="text-xs text-muted-foreground">Telegram</span>
               </div>
-              <div className="flex flex-col items-center gap-2">
-                <Video className="w-8 h-8 text-purple-400" />
+              <div className="flex flex-col items-center gap-2 cursor-pointer">
+                <Video className="w-8 h-8 text-purple-400 hover:scale-125 transition-transform duration-300" />
                 <span className="text-xs text-muted-foreground">Viber</span>
               </div>
             </div>
