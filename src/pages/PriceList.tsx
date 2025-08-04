@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, MessageSquare, Video, CheckCircle } from "lucide-react";
@@ -7,22 +8,24 @@ const ServiceCard = ({
   price, 
   description, 
   features, 
-  supportApps 
+  supportApps,
+  onGetStarted 
 }: { 
   title: string; 
   price: string; 
   description: string; 
   features?: string[];
   supportApps?: boolean;
+  onGetStarted: () => void;
 }) => {
   return (
-    <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+    <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
       <CardHeader className="text-center pb-6">
         <CardTitle className="text-3xl font-bold text-cyber-gradient mb-2">{title}</CardTitle>
         <div className="text-4xl font-black text-white mb-4">{price}</div>
         <CardDescription className="text-muted-foreground/80 text-lg">{description}</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 flex-grow flex flex-col">
         {features && (
           <div className="space-y-3">
             {features.map((feature, index) => (
@@ -54,15 +57,18 @@ const ServiceCard = ({
           </div>
         )}
         
-        <Button variant="cyber" className="w-full text-white mt-6">
-          Get Started
-        </Button>
+        <div className="mt-auto pt-6">
+          <Button variant="cyber" className="w-full text-white" onClick={onGetStarted}>
+            Get Started
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );
 };
 
 const PriceList = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Dark gradient background */}
@@ -95,6 +101,7 @@ const PriceList = () => {
               "Real-time issue tracking"
             ]}
             supportApps={true}
+            onGetStarted={() => navigate('/contact')}
           />
           
           <ServiceCard
@@ -108,6 +115,7 @@ const PriceList = () => {
               "Compliance verification",
               "Detailed documentation"
             ]}
+            onGetStarted={() => navigate('/contact')}
           />
         </div>
 
