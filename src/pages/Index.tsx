@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Truck, Globe, Users, Award, MapPin, Clock, Star, TrendingUp } from "lucide-react";
+import { Users, Award, MapPin, MessageCircle, Shield, CheckCircle2 } from "lucide-react";
 
 const Index = () => {
   return (
@@ -21,23 +21,17 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8">
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <Truck className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">2,500+</div>
-              <p className="text-muted-foreground">Deliveries Completed</p>
-            </Card>
-            
+          <div className="grid md:grid-cols-3 gap-8">
             <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
               <Users className="w-12 h-12 mx-auto mb-4 text-green-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">150+</div>
+              <div className="text-3xl font-black text-cyber-gradient mb-2">500</div>
               <p className="text-muted-foreground">Happy Clients</p>
             </Card>
             
             <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <Globe className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">25</div>
-              <p className="text-muted-foreground">States Covered</p>
+              <CheckCircle2 className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+              <div className="text-3xl font-black text-cyber-gradient mb-2">100+</div>
+              <p className="text-muted-foreground">Audits Passed</p>
             </Card>
             
             <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
@@ -70,89 +64,38 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground/80 mb-4">
-                  Pensacola, Florida<br />
-                  Strategic Gulf Coast location
+                  All USA Territory<br />
+                  Nationwide logistics coverage
                 </p>
-                <Badge variant="secondary" className="bg-cyan-400/20 text-cyan-400">Primary</Badge>
+                <Badge variant="secondary" className="bg-cyan-400/20 text-cyan-400">Nationwide</Badge>
               </CardContent>
             </Card>
             
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
-                <Clock className="w-12 h-12 mx-auto mb-4 text-green-400" />
-                <CardTitle className="text-cyber-gradient">Express Routes</CardTitle>
+                <MessageCircle className="w-12 h-12 mx-auto mb-4 text-green-400" />
+                <CardTitle className="text-cyber-gradient">Fast Response</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground/80 mb-4">
-                  Southeast Corridor<br />
-                  48-hour delivery guarantee
+                  Quick answers to all questions<br />
+                  Instant client communication
                 </p>
-                <Badge variant="secondary" className="bg-green-400/20 text-green-400">Express</Badge>
+                <Badge variant="secondary" className="bg-green-400/20 text-green-400">24/7</Badge>
               </CardContent>
             </Card>
             
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
-                <TrendingUp className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-                <CardTitle className="text-cyber-gradient">Expanding Network</CardTitle>
+                <Shield className="w-12 h-12 mx-auto mb-4 text-purple-400" />
+                <CardTitle className="text-cyber-gradient">Quality Guarantee</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground/80 mb-4">
-                  Nationwide Coverage<br />
-                  Growing to serve you better
+                  100% satisfaction promise<br />
+                  Your success is our priority
                 </p>
-                <Badge variant="secondary" className="bg-purple-400/20 text-purple-400">Growing</Badge>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Testimonials */}
-      <section className="py-20 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-orange-900/10" />
-        <div className="container mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
-              <span className="text-cyber-gradient">Client Success</span>
-            </h2>
-            <p className="text-xl text-muted-foreground/60 max-w-3xl mx-auto">
-              What our partners say about working with us
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground/80 mb-6 italic">
-                  "DYSTINCT LOGBOOK S&S transformed our supply chain. Their 24/7 support and real-time tracking gave us the peace of mind we needed for our critical shipments."
-                </p>
-                <div className="border-t border-white/10 pt-4">
-                  <p className="font-semibold text-cyber-gradient">Sarah Johnson</p>
-                  <p className="text-sm text-muted-foreground">Operations Manager, TechFlow Industries</p>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground/80 mb-6 italic">
-                  "Exceptional service and reliability. Their audit system helped us optimize costs by 30% while maintaining delivery quality. Highly recommended!"
-                </p>
-                <div className="border-t border-white/10 pt-4">
-                  <p className="font-semibold text-cyber-gradient">Michael Chen</p>
-                  <p className="text-sm text-muted-foreground">Logistics Director, Global Manufacturing Corp</p>
-                </div>
+                <Badge variant="secondary" className="bg-purple-400/20 text-purple-400">Guaranteed</Badge>
               </CardContent>
             </Card>
           </div>
