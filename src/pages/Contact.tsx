@@ -53,8 +53,7 @@ const Contact = () => {
 
         {/* Contact Options Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer"
-                style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgb(0, 207, 255)20` }}>
+          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
             <CardHeader className="text-center pb-4">
               <Phone className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
               <CardTitle className="text-cyber-gradient">Phone Call</CardTitle>
@@ -78,8 +77,7 @@ const Contact = () => {
             </CardContent>
           </Card>
           
-          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer"
-                style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgb(255, 109, 217)20` }}>
+          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
             <CardHeader className="text-center pb-4">
               <Mail className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
               <CardTitle className="text-cyber-gradient">Email Support</CardTitle>
@@ -92,8 +90,7 @@ const Contact = () => {
             </CardContent>
           </Card>
           
-          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer"
-                style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgb(0, 255, 0)20` }}>
+          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
             <CardHeader className="text-center pb-4">
               <MessageSquare className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
               <CardTitle className="text-cyber-gradient">Live Chat</CardTitle>
