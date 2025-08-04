@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MessageSquare, Video, CheckCircle } from "lucide-react";
+import { Phone, MessageSquare, Video, CheckCircle, FileText, BarChart3, Shield } from "lucide-react";
 
 const ServiceCard = ({ 
   title, 
@@ -9,6 +9,7 @@ const ServiceCard = ({
   description, 
   features, 
   supportApps,
+  auditFeatures,
   onGetStarted 
 }: { 
   title: string; 
@@ -16,6 +17,7 @@ const ServiceCard = ({
   description: string; 
   features?: string[];
   supportApps?: boolean;
+  auditFeatures?: boolean;
   onGetStarted: () => void;
 }) => {
   return (
@@ -52,6 +54,26 @@ const ServiceCard = ({
               <div className="flex flex-col items-center gap-2 cursor-pointer">
                 <Video className="w-8 h-8 text-purple-400 hover:scale-125 transition-transform duration-300" />
                 <span className="text-xs text-muted-foreground">Viber</span>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {auditFeatures && (
+          <div className="mt-6">
+            <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Audit Tools:</h4>
+            <div className="flex justify-center gap-6">
+              <div className="flex flex-col items-center gap-2 cursor-pointer">
+                <FileText className="w-8 h-8 text-blue-400 hover:scale-125 transition-transform duration-300" />
+                <span className="text-xs text-muted-foreground">Reports</span>
+              </div>
+              <div className="flex flex-col items-center gap-2 cursor-pointer">
+                <BarChart3 className="w-8 h-8 text-orange-400 hover:scale-125 transition-transform duration-300" />
+                <span className="text-xs text-muted-foreground">Analytics</span>
+              </div>
+              <div className="flex flex-col items-center gap-2 cursor-pointer">
+                <Shield className="w-8 h-8 text-red-400 hover:scale-125 transition-transform duration-300" />
+                <span className="text-xs text-muted-foreground">Security</span>
               </div>
             </div>
           </div>
@@ -115,14 +137,15 @@ const PriceList = () => {
               "Compliance verification",
               "Detailed documentation"
             ]}
+            auditFeatures={true}
             onGetStarted={() => navigate('/contact')}
           />
         </div>
 
         {/* Back Button */}
         <div className="text-center">
-          <Button variant="cyber-secondary" size="lg" className="text-white" onClick={() => window.history.back()}>
-            Back to Contact
+          <Button variant="cyber-secondary" size="lg" className="text-white" onClick={() => navigate('/')}>
+            Back Home
           </Button>
         </div>
       </div>
