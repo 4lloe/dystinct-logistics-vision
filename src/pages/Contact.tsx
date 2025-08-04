@@ -97,7 +97,7 @@ const Contact = () => {
             <CardHeader className="text-center pb-4">
               <MessageSquare className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
               <CardTitle className="text-cyber-gradient">Live Chat</CardTitle>
-              <CardDescription className="text-muted-foreground/80">Instant messaging with our support team</CardDescription>
+              <CardDescription className="text-muted-foreground/80">Instant messaging with our support team via Telegram</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
               <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('https://t.me/+37376500222')}>
@@ -118,9 +118,9 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground/80">
-                38 S BLUE ANGEL PKWY<br />
-                PENSACOLA, FL 32506<br />
-                UNITED STATES
+                38 S Blue Angel Pkwy<br />
+                Pensacola, FL 32506<br />
+                United States
               </p>
             </CardContent>
           </Card>
