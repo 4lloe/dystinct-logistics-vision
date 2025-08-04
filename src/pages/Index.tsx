@@ -89,7 +89,7 @@ const Index = () => {
       </section>
 
       {/* Our Services */}
-      <section className="py-20 px-6 relative">
+      <section id="services" className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-l from-cyan-900/10 via-transparent to-green-900/10" />
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
@@ -153,46 +153,217 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Us */}
-      <section className="py-20 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-cyan-900/10" />
+      {/* Price List */}
+      <section id="pricelist" className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-green-900/30 to-purple-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 via-transparent to-green-800/20" />
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-purple-900/30 to-slate-800" />
+        
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
-              <span className="text-cyber-gradient">Contact Us</span>
+              <span className="text-cyber-gradient">PRICE LIST</span>
             </h2>
-            <p className="text-xl text-muted-foreground/60 max-w-3xl mx-auto">
-              Get in touch with our professional logistics team
+            <p className="text-xl text-muted-foreground/60 max-w-2xl mx-auto">
+              Choose the perfect logistics solution for your business needs
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <Phone className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-              <CardTitle className="text-cyber-gradient mb-2">Call Us</CardTitle>
-              <p className="text-muted-foreground/80 mb-4">
-                +1 (331) 454-9901<br />
-                +373 76500222
-              </p>
-              <p className="text-sm text-muted-foreground">24/7 Support</p>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-2">Support 24/7</CardTitle>
+                <div className="text-4xl font-black text-white mb-4">$129</div>
+                <CardDescription className="text-muted-foreground/80 text-lg">per unit/month</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6 flex-grow flex flex-col">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Round-the-clock customer support</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Priority response time</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Multi-channel communication</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Dedicated support team</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Real-time issue tracking</span>
+                  </div>
+                </div>
+                
+                <div className="mt-6">
+                  <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Available via:</h4>
+                  <div className="flex justify-center gap-6">
+                    <div className="flex flex-col items-center gap-2 cursor-pointer">
+                      <Phone className="w-8 h-8 text-cyan-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Phone</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 cursor-pointer">
+                      <MessageSquare className="w-8 h-8 text-green-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Telegram</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 cursor-pointer">
+                      <Phone className="w-8 h-8 text-purple-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Viber</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
             </Card>
             
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <Mail className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-              <CardTitle className="text-cyber-gradient mb-2">Email Us</CardTitle>
-              <p className="text-muted-foreground/80 mb-4">
-                info@dystinctlog-ss.us
-              </p>
-              <p className="text-sm text-muted-foreground">Quick Response</p>
+            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-2">Audits</CardTitle>
+                <div className="text-4xl font-black text-white mb-4">$99</div>
+                <CardDescription className="text-muted-foreground/80 text-lg">per unit</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6 flex-grow flex flex-col">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Comprehensive logistics audit</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Performance analysis report</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Cost optimization recommendations</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Compliance verification</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Detailed documentation</span>
+                  </div>
+                </div>
+                
+                <div className="mt-6">
+                  <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Audit Tools:</h4>
+                  <div className="flex justify-center gap-6">
+                    <div className="flex flex-col items-center gap-2 cursor-pointer">
+                      <Shield className="w-8 h-8 text-blue-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Reports</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 cursor-pointer">
+                      <Award className="w-8 h-8 text-orange-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Analytics</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-2 cursor-pointer">
+                      <Shield className="w-8 h-8 text-red-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Security</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Us */}
+      <section id="contact" className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-green-900/30 to-purple-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 via-transparent to-green-800/20" />
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-purple-900/30 to-slate-800" />
+        
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
+              <span className="text-cyber-gradient">CONTACT US</span>
+            </h2>
+            <p className="text-xl text-muted-foreground/60 max-w-2xl mx-auto">
+              Choose your preferred way to get in touch with our professional logistics team
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
+              <CardHeader className="text-center pb-4">
+                <Phone className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
+                <CardTitle className="text-cyber-gradient">Phone Call</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground/80 mb-4">
+                  +1 (331) 454-9901<br />
+                  +373 76500222
+                </p>
+                <p className="text-sm text-muted-foreground">24/7 Support</p>
+              </CardContent>
             </Card>
             
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <MessageSquare className="w-12 h-12 mx-auto mb-4 text-green-400" />
-              <CardTitle className="text-cyber-gradient mb-2">Chat with Us</CardTitle>
-              <p className="text-muted-foreground/80 mb-4">
-                Telegram Support
-              </p>
-              <p className="text-sm text-muted-foreground">Instant Messaging</p>
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
+              <CardHeader className="text-center pb-4">
+                <Mail className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
+                <CardTitle className="text-cyber-gradient">Email Support</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground/80 mb-4">
+                  info@dystinctlog-ss.us
+                </p>
+                <p className="text-sm text-muted-foreground">Quick Response</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
+              <CardHeader className="text-center pb-4">
+                <MessageSquare className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
+                <CardTitle className="text-cyber-gradient">Live Chat</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Instant messaging with our support team via Telegram</CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground/80 mb-4">
+                  Telegram Support
+                </p>
+                <p className="text-sm text-muted-foreground">Instant Messaging</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="glass-card bg-background/10 backdrop-blur-md">
+              <CardHeader>
+                <CardTitle className="text-cyber-gradient flex items-center gap-3">
+                  <Phone className="w-6 h-6" />
+                  Office Location
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground/80">
+                  38 S Blue Angel Pkwy<br />
+                  Pensacola, FL 32506<br />
+                  United States
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card bg-background/10 backdrop-blur-md">
+              <CardHeader>
+                <CardTitle className="text-cyber-gradient flex items-center gap-3">
+                  <Clock className="w-6 h-6" />
+                  Business Hours
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground/80">
+                  24/7 support<br />
+                  Office Hours: Mon-Fri 8AM-6PM
+                </p>
+              </CardContent>
             </Card>
           </div>
         </div>

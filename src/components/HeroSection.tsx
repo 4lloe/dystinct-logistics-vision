@@ -32,7 +32,12 @@ const StatCard = ({ title, subtitle, glowColor }: { title: string; subtitle?: st
 };
 
 export const HeroSection = () => {
-  const navigate = useNavigate();
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="min-h-screen relative overflow-hidden flex items-center">
@@ -106,23 +111,23 @@ export const HeroSection = () => {
                           background: 'var(--gradient-cyber)',
                           boxShadow: '0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(255, 109, 217, 0.3), 0 0 60px rgba(153, 102, 255, 0.2)'
                         }}
-                        onClick={() => navigate('/contact')}>
+                        onClick={() => scrollToSection('contact')}>
                   Contact
                 </Button>
                 <div className="grid grid-cols-3 gap-4">
                   <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
                           style={{ background: 'var(--gradient-card)' }}
-                          onClick={() => navigate('/our-services')}>
+                          onClick={() => scrollToSection('services')}>
                     Our Services
                   </Button>
                   <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
                           style={{ background: 'var(--gradient-card)' }}
-                          onClick={() => navigate('/price-list')}>
+                          onClick={() => scrollToSection('pricelist')}>
                     Price List
                   </Button>
                   <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
                           style={{ background: 'var(--gradient-card)' }}
-                          onClick={() => navigate('/faq')}>
+                          onClick={() => scrollToSection('contact')}>
                     FAQ
                   </Button>
                 </div>
