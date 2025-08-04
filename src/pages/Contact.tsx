@@ -51,29 +51,50 @@ const Contact = () => {
 
         {/* Contact Options Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ContactOption
-            icon={Phone}
-            title="Phone Call"
-            description="Speak directly with our logistics specialists"
-            action="Call Now"
-            glowColor="rgb(0, 207, 255)"
-          />
+          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer"
+                style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgb(0, 207, 255)20` }}>
+            <CardHeader className="text-center pb-4">
+              <Phone className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
+              <CardTitle className="text-cyber-gradient">Phone Call</CardTitle>
+              <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center space-y-2">
+              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+13314549901')}>
+                Call +1 (331) 454-9901
+              </Button>
+              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('tel:+37376500222')}>
+                Call +373 76500222
+              </Button>
+            </CardContent>
+          </Card>
           
-          <ContactOption
-            icon={Mail}
-            title="Email Support"
-            description="Send us detailed inquiries and documentation"
-            action="Send Email"
-            glowColor="rgb(255, 109, 217)"
-          />
+          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer"
+                style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgb(255, 109, 217)20` }}>
+            <CardHeader className="text-center pb-4">
+              <Mail className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
+              <CardTitle className="text-cyber-gradient">Email Support</CardTitle>
+              <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
+                Send Email
+              </Button>
+            </CardContent>
+          </Card>
           
-          <ContactOption
-            icon={MessageSquare}
-            title="Live Chat"
-            description="Instant messaging with our support team"
-            action="Start Chat"
-            glowColor="rgb(0, 255, 0)"
-          />
+          <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer"
+                style={{ boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgb(0, 255, 0)20` }}>
+            <CardHeader className="text-center pb-4">
+              <MessageSquare className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
+              <CardTitle className="text-cyber-gradient">Live Chat</CardTitle>
+              <CardDescription className="text-muted-foreground/80">Instant messaging with our support team</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <Button variant="cyber" className="w-full group-hover:shadow-lg" onClick={() => window.open('https://t.me/+37376500222')}>
+                Start Chat
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Contact Information */}
@@ -87,8 +108,8 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground/80">
-                123 Logistics Boulevard<br />
-                Transport City, TC 12345<br />
+                38 S BLUE ANGEL PKWY<br />
+                PENSACOLA, FL 32506<br />
                 United States
               </p>
             </CardContent>
@@ -103,9 +124,8 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground/80">
-                24/7 Emergency Support<br />
-                Office Hours: Mon-Fri 8AM-6PM<br />
-                Weekend Support Available
+                24/7 support<br />
+                Office Hours: Mon-Fri 8AM-6PM
               </p>
             </CardContent>
           </Card>
@@ -113,8 +133,8 @@ const Contact = () => {
 
         {/* Back Button */}
         <div className="text-center mt-16">
-          <Button variant="cyber-secondary" size="lg" onClick={() => window.history.back()}>
-            Back to Home
+          <Button variant="cyber-secondary" size="lg" onClick={() => window.location.href = '/pricelist'}>
+            PRICELIST VIEW
           </Button>
         </div>
       </div>
