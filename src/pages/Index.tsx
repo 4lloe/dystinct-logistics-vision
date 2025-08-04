@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Award, MapPin, MessageCircle, Shield, CheckCircle2 } from "lucide-react";
+import { Users, Award, MessageCircle, Shield, CheckCircle2, Truck, Clock, Star, Phone, Mail, MessageSquare } from "lucide-react";
 
 const Index = () => {
   return (
@@ -24,8 +24,8 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
               <Users className="w-12 h-12 mx-auto mb-4 text-green-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">500</div>
-              <p className="text-muted-foreground">Happy Clients</p>
+              <div className="text-3xl font-black text-cyber-gradient mb-2">500+</div>
+              <p className="text-muted-foreground">Satisfied Clients</p>
             </Card>
             
             <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
@@ -56,21 +56,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
-              <CardHeader className="text-center">
-                <MapPin className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-                <CardTitle className="text-cyber-gradient">Main Hub</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground/80 mb-4">
-                  All USA Territory<br />
-                  Nationwide logistics coverage
-                </p>
-                <Badge variant="secondary" className="bg-cyan-400/20 text-cyan-400">Nationwide</Badge>
-              </CardContent>
-            </Card>
-            
+          <div className="grid md:grid-cols-2 gap-8">
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
                 <MessageCircle className="w-12 h-12 mx-auto mb-4 text-green-400" />
@@ -102,40 +88,111 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Technology Section */}
+      {/* Our Services */}
       <section className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-l from-cyan-900/10 via-transparent to-green-900/10" />
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
-              <span className="text-cyber-gradient">Innovation Driven</span>
+              <span className="text-cyber-gradient">Our Services</span>
             </h2>
             <p className="text-xl text-muted-foreground/60 max-w-3xl mx-auto">
-              Cutting-edge technology for modern logistics challenges
+              Comprehensive logistics solutions for modern businesses
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <Card className="glass-card p-12 text-center hover:scale-105 transition-all duration-300">
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-8 mb-8">
-                  <div>
-                    <div className="text-2xl font-bold text-cyber-gradient mb-2">Real-Time GPS</div>
-                    <p className="text-muted-foreground/80">Live tracking on every shipment</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-cyber-gradient mb-2">AI Optimization</div>
-                    <p className="text-muted-foreground/80">Smart route planning</p>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-cyber-gradient mb-2">Cloud Integration</div>
-                    <p className="text-muted-foreground/80">Seamless data access</p>
-                  </div>
-                </div>
-                <p className="text-lg text-muted-foreground/80">
-                  Our technology stack ensures maximum efficiency, transparency, and reliability for every shipment.
-                </p>
-              </CardContent>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+              <CardHeader className="text-center pb-4">
+                <Truck className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
+                <CardTitle className="text-cyber-gradient">Fleet Management</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Complete transportation solutions with modern fleet tracking and management systems</CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+              <CardHeader className="text-center pb-4">
+                <Shield className="w-12 h-12 mx-auto mb-4 text-purple-400" />
+                <CardTitle className="text-cyber-gradient">Safety First</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Rigorous safety protocols and compliance with all federal transportation regulations</CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+              <CardHeader className="text-center pb-4">
+                <Clock className="w-12 h-12 mx-auto mb-4 text-green-400" />
+                <CardTitle className="text-cyber-gradient">24/7 Support</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Round-the-clock availability for emergency situations and urgent logistics needs</CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+              <CardHeader className="text-center pb-4">
+                <Users className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
+                <CardTitle className="text-cyber-gradient">500+ Drivers</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Experienced and professional drivers with extensive knowledge of transportation routes</CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+              <CardHeader className="text-center pb-4">
+                <Award className="w-12 h-12 mx-auto mb-4 text-orange-400" />
+                <CardTitle className="text-cyber-gradient">Industry Recognition</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Certified professionals with industry awards and recognition for excellence in logistics</CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+              <CardHeader className="text-center pb-4">
+                <Star className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
+                <CardTitle className="text-cyber-gradient">Premium Quality</CardTitle>
+                <CardDescription className="text-muted-foreground/80">Top-tier service quality with attention to detail in every aspect of logistics operations</CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Us */}
+      <section className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-cyan-900/10" />
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
+              <span className="text-cyber-gradient">Contact Us</span>
+            </h2>
+            <p className="text-xl text-muted-foreground/60 max-w-3xl mx-auto">
+              Get in touch with our professional logistics team
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
+              <Phone className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
+              <CardTitle className="text-cyber-gradient mb-2">Call Us</CardTitle>
+              <p className="text-muted-foreground/80 mb-4">
+                +1 (331) 454-9901<br />
+                +373 76500222
+              </p>
+              <p className="text-sm text-muted-foreground">24/7 Support</p>
+            </Card>
+            
+            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
+              <Mail className="w-12 h-12 mx-auto mb-4 text-purple-400" />
+              <CardTitle className="text-cyber-gradient mb-2">Email Us</CardTitle>
+              <p className="text-muted-foreground/80 mb-4">
+                info@dystinctlog-ss.us
+              </p>
+              <p className="text-sm text-muted-foreground">Quick Response</p>
+            </Card>
+            
+            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
+              <MessageSquare className="w-12 h-12 mx-auto mb-4 text-green-400" />
+              <CardTitle className="text-cyber-gradient mb-2">Chat with Us</CardTitle>
+              <p className="text-muted-foreground/80 mb-4">
+                Telegram Support
+              </p>
+              <p className="text-sm text-muted-foreground">Instant Messaging</p>
             </Card>
           </div>
         </div>
