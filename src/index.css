@@ -151,19 +151,16 @@
     background-clip: text;
   }
 
-  /* Cyber button variants - transparent with glow */
+  /* Cyber button variants - clean without shadows */
   .btn-cyber {
     @apply px-8 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-md;
     background: linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 109, 217, 0.15));
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: var(--glow-cyan);
     transition: var(--transition-cyber);
   }
 
   .btn-cyber:hover {
-    transform: translateY(-2px);
     background: linear-gradient(135deg, rgba(0, 255, 255, 0.25), rgba(255, 109, 217, 0.25));
-    box-shadow: var(--glow-cyan), var(--shadow-elevated);
   }
 
   .btn-cyber-secondary {
@@ -174,10 +171,8 @@
   }
 
   .btn-cyber-secondary:hover {
-    transform: translateY(-2px);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     border: 1px solid hsl(var(--primary) / 0.3);
-    box-shadow: var(--glow-cyan);
   }
 
   /* Floating badge */
