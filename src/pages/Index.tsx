@@ -15,40 +15,6 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
       <HeroSection />
       
-      {/* Company Statistics */}
-      <section className="py-20 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-purple-900/10" />
-        <div className="container mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
-              <span className="text-cyber-gradient">Our Achievements</span>
-            </h2>
-            <p className="text-xl text-muted-foreground/60 max-w-3xl mx-auto">
-              Numbers that speak for our excellence in logistics
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <Users className="w-12 h-12 mx-auto mb-4 text-green-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">500+</div>
-              <p className="text-muted-foreground">Satisfied Clients</p>
-            </Card>
-            
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <CheckCircle2 className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">100+</div>
-              <p className="text-muted-foreground">Audits Passed</p>
-            </Card>
-            
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <Award className="w-12 h-12 mx-auto mb-4 text-orange-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">99.8%</div>
-              <p className="text-muted-foreground">Success Rate</p>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Coverage Areas */}
       <section className="py-20 px-6 relative">
@@ -63,7 +29,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
                 <MessageCircle className="w-12 h-12 mx-auto mb-4 text-green-400" />
@@ -90,6 +56,12 @@ const Index = () => {
                 </p>
                 <Badge variant="secondary" className="bg-purple-400/20 text-purple-400">Guaranteed</Badge>
               </CardContent>
+            </Card>
+            
+            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
+              <Award className="w-12 h-12 mx-auto mb-4 text-orange-400" />
+              <div className="text-3xl font-black text-cyber-gradient mb-2">99.8%</div>
+              <p className="text-muted-foreground">Success Rate</p>
             </Card>
           </div>
         </div>
