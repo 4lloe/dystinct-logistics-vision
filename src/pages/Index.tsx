@@ -111,14 +111,6 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-4">
-                <Truck className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-                <CardTitle className="text-cyber-gradient">Fleet Management</CardTitle>
-                <CardDescription className="text-muted-foreground/80">Complete transportation solutions with modern fleet tracking and management systems</CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
-              <CardHeader className="text-center pb-4">
                 <Shield className="w-12 h-12 mx-auto mb-4 text-purple-400" />
                 <CardTitle className="text-cyber-gradient">Safety First</CardTitle>
                 <CardDescription className="text-muted-foreground/80">Rigorous safety protocols and compliance with all federal transportation regulations</CardDescription>
@@ -130,22 +122,6 @@ const Index = () => {
                 <Clock className="w-12 h-12 mx-auto mb-4 text-green-400" />
                 <CardTitle className="text-cyber-gradient">24/7 Support</CardTitle>
                 <CardDescription className="text-muted-foreground/80">Round-the-clock availability for emergency situations and urgent logistics needs</CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
-              <CardHeader className="text-center pb-4">
-                <Users className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-                <CardTitle className="text-cyber-gradient">500+ Drivers</CardTitle>
-                <CardDescription className="text-muted-foreground/80">Experienced and professional drivers with extensive knowledge of transportation routes</CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
-              <CardHeader className="text-center pb-4">
-                <Award className="w-12 h-12 mx-auto mb-4 text-orange-400" />
-                <CardTitle className="text-cyber-gradient">Industry Recognition</CardTitle>
-                <CardDescription className="text-muted-foreground/80">Certified professionals with industry awards and recognition for excellence in logistics</CardDescription>
               </CardHeader>
             </Card>
 
