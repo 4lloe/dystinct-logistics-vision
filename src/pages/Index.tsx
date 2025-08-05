@@ -304,13 +304,10 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground/80 mb-4">
-                  +1 (331) 454-9901<br />
-                  +373 76500222
-                </p>
                 <p className="text-sm text-muted-foreground mb-4">24/7 Support</p>
                 <Button 
-                  className="bg-primary text-white hover:bg-primary/90"
+                  variant="ghost" 
+                  className="bg-white/10 text-white border border-white/20 hover:bg-white/20"
                   onClick={() => setIsPhoneDialogOpen(true)}
                 >
                   Call now
@@ -325,12 +322,10 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground/80 mb-4">
-                  info@dystinctlog-ss.us
-                </p>
                 <p className="text-sm text-muted-foreground mb-4">Quick Response</p>
                 <Button 
-                  className="bg-primary text-white hover:bg-primary/90"
+                  variant="ghost" 
+                  className="bg-white/10 text-white border border-white/20 hover:bg-white/20"
                   onClick={() => setIsEmailDialogOpen(true)}
                 >
                   Send email
@@ -345,12 +340,10 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Instant messaging with our support team via Telegram</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground/80 mb-4">
-                  Telegram Support
-                </p>
                 <p className="text-sm text-muted-foreground mb-4">Instant Messaging</p>
                 <Button 
-                  className="bg-primary text-white hover:bg-primary/90"
+                  variant="ghost" 
+                  className="bg-white/10 text-white border border-white/20 hover:bg-white/20"
                   onClick={() => setIsChatDialogOpen(true)}
                 >
                   Start chat
@@ -385,7 +378,7 @@ const Index = () => {
                   <Phone className="w-5 h-5 mr-3" />
                   <div>
                     <div className="font-semibold">+373 76500222</div>
-                    <div className="text-sm text-muted-foreground">EU Office</div>
+                    <div className="text-sm text-muted-foreground">MD Office</div>
                   </div>
                 </Button>
               </div>
@@ -424,12 +417,12 @@ const Index = () => {
                 <Button 
                   variant="outline" 
                   className="p-4 h-auto text-left justify-start"
-                  onClick={() => window.open('https://t.me/+13314549901')}
+                  onClick={() => window.open('https://t.me/+37376500222')}
                 >
                   <MessageSquare className="w-5 h-5 mr-3" />
                   <div>
-                    <div className="font-semibold">+1 (331) 454-9901</div>
-                    <div className="text-sm text-muted-foreground">Telegram Support</div>
+                    <div className="font-semibold">+373 76500222</div>
+                    <div className="text-sm text-muted-foreground">MD Office</div>
                   </div>
                 </Button>
               </div>
