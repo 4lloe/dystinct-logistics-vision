@@ -1,10 +1,11 @@
-import { HeroSection } from "@/components/HeroSection";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Users, Award, MessageCircle, Shield, CheckCircle2, Truck, Clock, Star, Phone, Mail, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { MessageCircle, CheckCircle2, Award, Users, Phone, Mail, MessageSquare, Clock, MapPin, Shield, Star } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { HeroSection } from "@/components/HeroSection";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
@@ -13,6 +14,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      <Navigation />
       <HeroSection />
       
 
@@ -29,38 +31,30 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
-              <CardHeader className="text-center">
-                <MessageCircle className="w-12 h-12 mx-auto mb-4 text-green-400" />
-                <CardTitle className="text-cyber-gradient">Fast Response</CardTitle>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center pb-4">
+                <MessageCircle className="w-10 h-10 mx-auto mb-3 text-green-400" />
+                <CardTitle className="text-xl font-bold">Fast Response</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground/80 mb-4">
-                  Quick answers to all questions<br />
-                  Instant client communication
-                </p>
                 <Badge variant="secondary" className="bg-green-400/20 text-green-400">24/7</Badge>
               </CardContent>
             </Card>
             
-            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300">
-              <CardHeader className="text-center">
-                <Shield className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-                <CardTitle className="text-cyber-gradient">Quality Guarantee</CardTitle>
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center pb-4">
+                <CheckCircle2 className="w-10 h-10 mx-auto mb-3 text-blue-400" />
+                <CardTitle className="text-xl font-bold">Quality Guarantee</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground/80 mb-4">
-                  100% satisfaction promise<br />
-                  Your success is our priority
-                </p>
                 <Badge variant="secondary" className="bg-purple-400/20 text-purple-400">Guaranteed</Badge>
               </CardContent>
             </Card>
             
-            <Card className="glass-card p-8 text-center hover:scale-105 transition-all duration-300">
-              <Award className="w-12 h-12 mx-auto mb-4 text-orange-400" />
-              <div className="text-3xl font-black text-cyber-gradient mb-2">99.8%</div>
+            <Card className="glass-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <Award className="w-10 h-10 mx-auto mb-3 text-orange-400" />
+              <div className="text-2xl font-black text-cyber-gradient mb-2">99.8%</div>
               <p className="text-muted-foreground">Success Rate</p>
             </Card>
           </div>
