@@ -1,26 +1,37 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
   const location = useLocation();
 
-  const menuItems = [
-    { label: "Home Page", path: "/" },
-    { label: "About Us", path: "/about-us" },
-    { label: "Our Services", path: "/our-services" },
-    { label: "Pricelist", path: "/pricelist" },
-    { label: "Contact Us", path: "/contact" },
-    { label: "FAQ", path: "/faq" },
-  ];
-
-  const handleNavigation = (path: string) => {
-    navigate(path);
+  const scrollToSection = (sectionId: string) => {
+    // If not on home page, go to home first then scroll
+    if (location.pathname !== '/') {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
     setIsOpen(false);
   };
+
+  const menuItems = [
+    { label: "Home Page", sectionId: "hero" },
+    { label: "About Us", sectionId: "about-us" },
+    { label: "Our Services", sectionId: "our-services" },
+    { label: "Pricelist", sectionId: "pricelist" },
+    { label: "Contact Us", sectionId: "contact" },
+    { label: "FAQ", sectionId: "faq" },
+  ];
 
   return (
     <div className="fixed top-4 right-4 z-50">
@@ -38,10 +49,10 @@ const Navigation = () => {
           <div className="p-2">
             {menuItems.map((item) => (
               <Button
-                key={item.path}
-                variant={location.pathname === item.path ? "secondary" : "ghost"}
+                key={item.sectionId}
+                variant="ghost"
                 className="w-full justify-start mb-1 last:mb-0"
-                onClick={() => handleNavigation(item.path)}
+                onClick={() => scrollToSection(item.sectionId)}
               >
                 {item.label}
               </Button>
