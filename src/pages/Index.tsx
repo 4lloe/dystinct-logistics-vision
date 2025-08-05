@@ -17,6 +17,95 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       
+      {/* About Us Section */}
+      <section className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-purple-900/10" />
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
+              <span className="text-cyber-gradient">Our Role</span>
+            </h2>
+            <p className="text-xl text-muted-foreground/60 max-w-3xl mx-auto">
+              We provide efficient, accurate, and real-time assistance to truck drivers operating in the United States, handling any need at any hour.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center">
+                <Clock className="w-12 h-12 mx-auto mb-4 text-green-400" />
+                <CardTitle className="text-xl">24/7 Operational Support</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-center">
+                  Deliver constant support to drivers on the road via phone, SMS, email, or internal apps, resolving urgent requests quickly and effectively.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center">
+                <Shield className="w-12 h-12 mx-auto mb-4 text-blue-400" />
+                <CardTitle className="text-xl">Documentation Guidance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-center">
+                  Assist with the accurate completion of essential documents such as BOL, logbooks, proof of delivery, fuel receipts, and more.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center">
+                <Award className="w-12 h-12 mx-auto mb-4 text-red-400" />
+                <CardTitle className="text-xl">Emergency Assistance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-center">
+                  Respond rapidly to emergencies, including accidents, mechanical failures, lost documents, issues with authorities, or medical situations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center">
+                <MessageSquare className="w-12 h-12 mx-auto mb-4 text-purple-400" />
+                <CardTitle className="text-xl">Communication Bridge</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-center">
+                  Act as an intermediary when drivers face communication barriers due to language, signal issues, or other obstacles.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center">
+                <MapPin className="w-12 h-12 mx-auto mb-4 text-orange-400" />
+                <CardTitle className="text-xl">ETA & Load Updates</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-center">
+                  Continuously monitor truck location and provide real-time updates on estimated pickup and delivery times.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
+              <CardHeader className="text-center">
+                <Users className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
+                <CardTitle className="text-xl">Broker Coordination</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-center">
+                  Facilitate communication with brokers, dispatchers, and warehouses to ensure seamless operations.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      
 
       {/* Coverage Areas */}
       <section className="py-20 px-6 relative">
@@ -296,32 +385,22 @@ const Index = () => {
 
           {/* Phone Dialog */}
           <Dialog open={isPhoneDialogOpen} onOpenChange={setIsPhoneDialogOpen}>
-            <DialogContent className="sm:max-w-md">
+            <DialogContent className="max-w-md bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700">
               <DialogHeader>
-                <DialogTitle className="text-center">Choose Phone Number</DialogTitle>
+                <DialogTitle className="text-center text-xl font-bold text-white">Choose Phone Number</DialogTitle>
               </DialogHeader>
-              <div className="flex flex-col gap-4 py-4">
+              <div className="space-y-4">
                 <Button 
-                  variant="outline" 
-                  className="p-4 h-auto text-left justify-start"
+                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
                   onClick={() => window.open('tel:+13314549901')}
                 >
-                  <Phone className="w-5 h-5 mr-3" />
-                  <div>
-                    <div className="font-semibold">+1 (331) 454-9901</div>
-                    <div className="text-sm text-muted-foreground">US Office</div>
-                  </div>
+                  Call us +1 (331) 454-9901
                 </Button>
                 <Button 
-                  variant="outline" 
-                  className="p-4 h-auto text-left justify-start"
+                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
                   onClick={() => window.open('tel:+37376500222')}
                 >
-                  <Phone className="w-5 h-5 mr-3" />
-                  <div>
-                    <div className="font-semibold">+373 76500222</div>
-                    <div className="text-sm text-muted-foreground">MD Office</div>
-                  </div>
+                  Call us +373 76500222
                 </Button>
               </div>
             </DialogContent>
@@ -329,21 +408,16 @@ const Index = () => {
 
           {/* Email Dialog */}
           <Dialog open={isEmailDialogOpen} onOpenChange={setIsEmailDialogOpen}>
-            <DialogContent className="sm:max-w-md">
+            <DialogContent className="max-w-md bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700">
               <DialogHeader>
-                <DialogTitle className="text-center">Email Address</DialogTitle>
+                <DialogTitle className="text-center text-xl font-bold text-white">Email Us</DialogTitle>
               </DialogHeader>
-              <div className="flex flex-col gap-4 py-4">
+              <div className="space-y-4">
                 <Button 
-                  variant="outline" 
-                  className="p-4 h-auto text-left justify-start"
+                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
                   onClick={() => window.open('mailto:info@dystinctlog-ss.us')}
                 >
-                  <Mail className="w-5 h-5 mr-3" />
-                  <div>
-                    <div className="font-semibold">info@dystinctlog-ss.us</div>
-                    <div className="text-sm text-muted-foreground">Business Inquiries</div>
-                  </div>
+                  info@dystinctlog-ss.us
                 </Button>
               </div>
             </DialogContent>
@@ -351,21 +425,22 @@ const Index = () => {
 
           {/* Chat Dialog */}
           <Dialog open={isChatDialogOpen} onOpenChange={setIsChatDialogOpen}>
-            <DialogContent className="sm:max-w-md">
+            <DialogContent className="max-w-md bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700">
               <DialogHeader>
-                <DialogTitle className="text-center">Start Telegram Chat</DialogTitle>
+                <DialogTitle className="text-center text-xl font-bold text-white">Live Chat</DialogTitle>
               </DialogHeader>
-              <div className="flex flex-col gap-4 py-4">
+              <div className="space-y-4">
                 <Button 
-                  variant="outline" 
-                  className="p-4 h-auto text-left justify-start"
+                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
                   onClick={() => window.open('https://t.me/+37376500222')}
                 >
-                  <MessageSquare className="w-5 h-5 mr-3" />
-                  <div>
-                    <div className="font-semibold">+373 76500222</div>
-                    <div className="text-sm text-muted-foreground">MD Office</div>
-                  </div>
+                  Telegram Chat
+                </Button>
+                <Button 
+                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
+                  onClick={() => window.open('viber://chat?number=+37376500222')}
+                >
+                  Viber Chat
                 </Button>
               </div>
             </DialogContent>
