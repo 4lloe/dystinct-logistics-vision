@@ -1,9 +1,16 @@
 import { HeroSection } from "@/components/HeroSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Users, Award, MessageCircle, Shield, CheckCircle2, Truck, Clock, Star, Phone, Mail, MessageSquare } from "lucide-react";
+import { useState } from "react";
 
 const Index = () => {
+  const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
+  const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
+  const [isChatDialogOpen, setIsChatDialogOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
       <HeroSection />
@@ -290,7 +297,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-4">
                 <Phone className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
                 <CardTitle className="text-cyber-gradient">Phone Call</CardTitle>
@@ -301,11 +308,17 @@ const Index = () => {
                   +1 (331) 454-9901<br />
                   +373 76500222
                 </p>
-                <p className="text-sm text-muted-foreground">24/7 Support</p>
+                <p className="text-sm text-muted-foreground mb-4">24/7 Support</p>
+                <Button 
+                  className="bg-primary text-white hover:bg-primary/90"
+                  onClick={() => setIsPhoneDialogOpen(true)}
+                >
+                  Call now
+                </Button>
               </CardContent>
             </Card>
             
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-4">
                 <Mail className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
                 <CardTitle className="text-cyber-gradient">Email Support</CardTitle>
@@ -315,11 +328,17 @@ const Index = () => {
                 <p className="text-muted-foreground/80 mb-4">
                   info@dystinctlog-ss.us
                 </p>
-                <p className="text-sm text-muted-foreground">Quick Response</p>
+                <p className="text-sm text-muted-foreground mb-4">Quick Response</p>
+                <Button 
+                  className="bg-primary text-white hover:bg-primary/90"
+                  onClick={() => setIsEmailDialogOpen(true)}
+                >
+                  Send email
+                </Button>
               </CardContent>
             </Card>
             
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-4">
                 <MessageSquare className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
                 <CardTitle className="text-cyber-gradient">Live Chat</CardTitle>
@@ -329,10 +348,93 @@ const Index = () => {
                 <p className="text-muted-foreground/80 mb-4">
                   Telegram Support
                 </p>
-                <p className="text-sm text-muted-foreground">Instant Messaging</p>
+                <p className="text-sm text-muted-foreground mb-4">Instant Messaging</p>
+                <Button 
+                  className="bg-primary text-white hover:bg-primary/90"
+                  onClick={() => setIsChatDialogOpen(true)}
+                >
+                  Start chat
+                </Button>
               </CardContent>
             </Card>
           </div>
+
+          {/* Phone Dialog */}
+          <Dialog open={isPhoneDialogOpen} onOpenChange={setIsPhoneDialogOpen}>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-center">Choose Phone Number</DialogTitle>
+              </DialogHeader>
+              <div className="flex flex-col gap-4 py-4">
+                <Button 
+                  variant="outline" 
+                  className="p-4 h-auto text-left justify-start"
+                  onClick={() => window.open('tel:+13314549901')}
+                >
+                  <Phone className="w-5 h-5 mr-3" />
+                  <div>
+                    <div className="font-semibold">+1 (331) 454-9901</div>
+                    <div className="text-sm text-muted-foreground">US Office</div>
+                  </div>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="p-4 h-auto text-left justify-start"
+                  onClick={() => window.open('tel:+37376500222')}
+                >
+                  <Phone className="w-5 h-5 mr-3" />
+                  <div>
+                    <div className="font-semibold">+373 76500222</div>
+                    <div className="text-sm text-muted-foreground">EU Office</div>
+                  </div>
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          {/* Email Dialog */}
+          <Dialog open={isEmailDialogOpen} onOpenChange={setIsEmailDialogOpen}>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-center">Email Address</DialogTitle>
+              </DialogHeader>
+              <div className="flex flex-col gap-4 py-4">
+                <Button 
+                  variant="outline" 
+                  className="p-4 h-auto text-left justify-start"
+                  onClick={() => window.open('mailto:info@dystinctlog-ss.us')}
+                >
+                  <Mail className="w-5 h-5 mr-3" />
+                  <div>
+                    <div className="font-semibold">info@dystinctlog-ss.us</div>
+                    <div className="text-sm text-muted-foreground">Business Inquiries</div>
+                  </div>
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          {/* Chat Dialog */}
+          <Dialog open={isChatDialogOpen} onOpenChange={setIsChatDialogOpen}>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-center">Start Telegram Chat</DialogTitle>
+              </DialogHeader>
+              <div className="flex flex-col gap-4 py-4">
+                <Button 
+                  variant="outline" 
+                  className="p-4 h-auto text-left justify-start"
+                  onClick={() => window.open('https://t.me/+13314549901')}
+                >
+                  <MessageSquare className="w-5 h-5 mr-3" />
+                  <div>
+                    <div className="font-semibold">+1 (331) 454-9901</div>
+                    <div className="text-sm text-muted-foreground">Telegram Support</div>
+                  </div>
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="glass-card bg-background/10 backdrop-blur-md">
