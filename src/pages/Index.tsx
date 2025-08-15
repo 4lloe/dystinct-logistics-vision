@@ -350,16 +350,6 @@ const Index = () => {
                 >
                   📧 info@dystinctlog-ss.us
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
-                  onClick={() => {
-                    window.open('mailto:support@dystinctlog-ss.us');
-                    setIsEmailDialogOpen(false);
-                  }}
-                >
-                  📧 support@dystinctlog-ss.us
-                </Button>
               </div>
             </DialogContent>
           </Dialog>
