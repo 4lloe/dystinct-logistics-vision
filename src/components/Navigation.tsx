@@ -34,7 +34,7 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="relative">
       <Button
         variant="outline"
         size="icon"
@@ -45,7 +45,7 @@ const Navigation = () => {
       </Button>
 
       {isOpen && (
-        <div className="absolute top-12 right-0 bg-background/95 backdrop-blur-sm border border-border/50 rounded-lg shadow-lg min-w-48">
+        <div className="absolute top-12 left-0 bg-background/95 backdrop-blur-sm border border-border/50 rounded-lg shadow-lg min-w-48">
           <div className="p-2">
             {menuItems.map((item) => (
               <Button

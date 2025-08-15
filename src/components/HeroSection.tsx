@@ -56,10 +56,10 @@ export const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-6xl lg:text-8xl font-black uppercase tracking-tight">
-                <span className="text-cyber-gradient">DYSTINCT</span>
+                <span className="text-cyber-gradient">PROFESSIONAL SUPPORT</span>
               </h1>
               <h2 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
-                <span className="text-cyber-gradient">LOGBOOK S&S</span>
+                <span className="text-cyber-gradient">AND SERVICES IN LOGISTICS</span>
               </h2>
               <p className="text-2xl font-geist font-light max-w-lg text-muted-foreground">
                 Professional logistics support available around the clock. 

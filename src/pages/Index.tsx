@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { HeroSection } from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
-import companyLogo from "@/assets/company-logo.png";
+import dotMcLogo from "@/assets/dot-mc-logo.png";
 
 const Index = () => {
   const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
@@ -15,28 +15,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
-      {/* Logo, Navigation Lines and Company Name */}
-      <div className="absolute top-6 left-6 z-50">
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-transparent">
-            <img 
-              src={companyLogo} 
-              alt="Company Logo" 
-              className="w-full h-full object-contain filter brightness-0 invert"
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <div className="h-0.5 w-8 bg-cyan-400"></div>
-            <div className="h-0.5 w-6 bg-purple-400"></div>
-            <div className="h-0.5 w-4 bg-green-400"></div>
-          </div>
-          <div className="text-white font-bold text-lg tracking-wider">
-            DYSTINCT LOGBOOK S&S LLC
-          </div>
+      {/* Logo and Navigation in top-left */}
+      <div className="fixed top-6 left-6 z-50 flex items-center gap-6">
+        <div className="w-16 h-16 bg-transparent">
+          <img 
+            src={dotMcLogo} 
+            alt="DOT MC Logo" 
+            className="w-full h-full object-contain"
+          />
         </div>
+        <Navigation />
       </div>
       
-      <Navigation />
       <div id="hero">
         <HeroSection />
       </div>
