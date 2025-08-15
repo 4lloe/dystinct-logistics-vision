@@ -15,15 +15,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
-      {/* Logo and Navigation in top-left */}
-      <div className="fixed top-6 left-6 z-50 flex items-center gap-6">
-        <div className="w-16 h-16 bg-transparent">
+      {/* Logo on left, Navigation on right */}
+      <div className="fixed top-6 left-6 z-50">
+        <div className="w-20 h-20 bg-transparent">
           <img 
             src={dotMcLogo} 
             alt="DOT MC Logo" 
             className="w-full h-full object-contain"
           />
         </div>
+      </div>
+      <div className="fixed top-6 right-6 z-50">
         <Navigation />
       </div>
       
@@ -121,25 +123,10 @@ const Index = () => {
       </section>
       
 
-      {/* Our Services */}
+      {/* Our Services - removed section title but keep route */}
       <section id="our-services" className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-cyan-900/10" />
         <div className="container mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
-              <span className="text-cyber-gradient">Our Services</span>
-            </h2>
-          </div>
-          
-          <div className="text-center mb-8">
-            <p className="text-xl text-muted-foreground/80 max-w-3xl mx-auto">
-              PROFESSIONAL SUPPORT AND SERVICES IN LOGISTICS
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16 max-w-2xl mx-auto">
-            {/* Only keeping these services */}
-          </div>
         </div>
       </section>
 
