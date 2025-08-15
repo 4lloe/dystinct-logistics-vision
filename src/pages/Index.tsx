@@ -221,7 +221,7 @@ const Index = () => {
 
           {/* Coming Soon Services */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center text-cyber-gradient mb-8">Coming Soon</h3>
+            <h3 className="text-2xl font-bold text-center text-cyber-gradient mb-8">COMING SOON</h3>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
                 <CardHeader className="text-center pb-4">
