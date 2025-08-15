@@ -365,16 +365,6 @@ const Index = () => {
                   variant="ghost" 
                   className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
                   onClick={() => {
-                    window.open('https://t.me/+13314549901');
-                    setIsChatDialogOpen(false);
-                  }}
-                >
-                  💬 Telegram 🇺🇸 +1 (331) 454-9901
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
-                  onClick={() => {
                     window.open('https://t.me/+37376500222');
                     setIsChatDialogOpen(false);
                   }}
