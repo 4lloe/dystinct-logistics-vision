@@ -100,12 +100,6 @@ const Index = () => {
       </section>
       
 
-      {/* Our Services - removed section title but keep route */}
-      <section id="our-services" className="py-20 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-cyan-900/10" />
-        <div className="container mx-auto relative z-10">
-        </div>
-      </section>
 
       {/* Price List */}
       <section id="pricelist" className="py-20 px-6 relative">
