@@ -13,12 +13,12 @@ const Index = () => {
   const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
   const [isChatDialogOpen, setIsChatDialogOpen] = useState(false);
   return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
-      {/* Logo and Navigation together on left */}
+      {/* Navigation and Logo */}
       <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
-        <div className="w-40 h-40 bg-transparent mt-6">
+        <Navigation />
+        <div className="w-28 h-28 bg-transparent mt-4">
           <img src={dotMcLogo} alt="DOT MC Logo" className="w-full h-full object-contain" />
         </div>
-        <Navigation />
       </div>
       
       <div id="hero">

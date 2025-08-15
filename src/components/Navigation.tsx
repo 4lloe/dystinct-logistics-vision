@@ -36,12 +36,12 @@ const Navigation = () => {
   return (
     <div className="relative">
       <Button
-        variant="outline"
+        variant="ghost"
         size="icon"
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-background/80 backdrop-blur-sm border-border/50"
+        className="bg-transparent border-none hover:bg-transparent p-2"
       >
-        {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+        {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
       </Button>
 
       {isOpen && (
