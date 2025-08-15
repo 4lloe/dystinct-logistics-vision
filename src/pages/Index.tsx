@@ -44,7 +44,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="glass-card hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md">
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
                 <Clock className="w-12 h-12 mx-auto mb-4 text-green-400" />
                 <CardTitle className="text-xl">24/7 Operational Support</CardTitle>
@@ -56,7 +56,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md">
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
                 <Shield className="w-12 h-12 mx-auto mb-4 text-blue-400" />
                 <CardTitle className="text-xl">Documentation Guidance</CardTitle>
@@ -68,7 +68,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md">
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
                 <Award className="w-12 h-12 mx-auto mb-4 text-red-400" />
                 <CardTitle className="text-xl">Emergency Assistance</CardTitle>
@@ -80,7 +80,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md">
+            <Card className="glass-card hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
                 <MessageSquare className="w-12 h-12 mx-auto mb-4 text-purple-400" />
                 <CardTitle className="text-xl">Communication Bridge</CardTitle>
