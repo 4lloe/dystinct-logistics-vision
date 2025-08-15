@@ -117,55 +117,13 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
               <CardHeader className="text-center pb-6">
                 <CardTitle className="text-3xl font-bold text-cyber-gradient mb-2">Support 24/7</CardTitle>
                 <div className="text-4xl font-black text-white mb-4">$129</div>
                 <CardDescription className="text-muted-foreground/80 text-lg">per unit/month</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6 flex-grow flex flex-col">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Round-the-clock customer support</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Priority response time</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Multi-channel communication</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Dedicated support team</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Real-time issue tracking</span>
-                  </div>
-                </div>
-                
-                <div className="mt-6">
-                  <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Available via:</h4>
-                  <div className="flex justify-center gap-6">
-                    <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Phone className="w-8 h-8 text-cyan-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Phone</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <MessageSquare className="w-8 h-8 text-green-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Telegram</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Phone className="w-8 h-8 text-purple-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Viber</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
             </Card>
             
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
@@ -174,49 +132,37 @@ const Index = () => {
                 <div className="text-4xl font-black text-white mb-4">$99</div>
                 <CardDescription className="text-muted-foreground/80 text-lg">per unit</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6 flex-grow flex flex-col">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Comprehensive logistics audit</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Performance analysis report</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Cost optimization recommendations</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Compliance verification</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Detailed documentation</span>
-                  </div>
-                </div>
-                
-                <div className="mt-6">
-                  <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Audit Tools:</h4>
-                  <div className="flex justify-center gap-6">
-                    <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-8 h-8 text-blue-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Reports</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Award className="w-8 h-8 text-orange-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Analytics</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-8 h-8 text-red-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Security</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
             </Card>
+          </div>
+
+          {/* Coming Soon Section */}
+          <div className="text-center mb-16">
+            <h3 className="text-3xl lg:text-4xl font-black uppercase tracking-tight mb-8 text-cyber-gradient">
+              Coming Soon
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <Card className="glass-card p-6 bg-background/5 backdrop-blur-md">
+                <CardHeader className="text-center">
+                  <Scale className="w-12 h-12 mx-auto mb-3 text-purple-400" />
+                  <CardTitle className="text-lg font-bold">DATA Q</CardTitle>
+                </CardHeader>
+              </Card>
+              
+              <Card className="glass-card p-6 bg-background/5 backdrop-blur-md">
+                <CardHeader className="text-center">
+                  <FileText className="w-12 h-12 mx-auto mb-3 text-orange-400" />
+                  <CardTitle className="text-lg font-bold">PERMITS</CardTitle>
+                </CardHeader>
+              </Card>
+              
+              <Card className="glass-card p-6 bg-background/5 backdrop-blur-md">
+                <CardHeader className="text-center">
+                  <Calculator className="w-12 h-12 mx-auto mb-3 text-cyan-400" />
+                  <CardTitle className="text-lg font-bold">IFTA</CardTitle>
+                </CardHeader>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
