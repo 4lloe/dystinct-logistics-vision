@@ -307,16 +307,30 @@ const Index = () => {
 
           {/* Phone Dialog */}
           <Dialog open={isPhoneDialogOpen} onOpenChange={setIsPhoneDialogOpen}>
-            <DialogContent className="max-w-md bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700">
+            <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10">
               <DialogHeader>
-                <DialogTitle className="text-center text-xl font-bold text-white">Choose Phone Number</DialogTitle>
+                <DialogTitle className="text-cyber-gradient text-center">Choose Phone Number</DialogTitle>
               </DialogHeader>
-              <div className="space-y-4">
-                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('tel:+13314549901')}>
-                  Call us +1 (331) 454-9901
+              <div className="space-y-4 pt-4">
+                <Button 
+                  variant="ghost" 
+                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
+                  onClick={() => {
+                    window.open('tel:+13314549901');
+                    setIsPhoneDialogOpen(false);
+                  }}
+                >
+                  Call 🇺🇸 +1 (331) 454-9901
                 </Button>
-                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('tel:+37376500222')}>
-                  Call us +373 76500222
+                <Button 
+                  variant="ghost" 
+                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
+                  onClick={() => {
+                    window.open('tel:+37376500222');
+                    setIsPhoneDialogOpen(false);
+                  }}
+                >
+                  Call 🇲🇩 +373 76500222
                 </Button>
               </div>
             </DialogContent>
@@ -329,7 +343,10 @@ const Index = () => {
                 <DialogTitle className="text-center text-xl font-bold text-white">Email Us</DialogTitle>
               </DialogHeader>
               <div className="space-y-4">
-                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
+                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => {
+                  window.open('mailto:info@dystinctlog-ss.us');
+                  setIsEmailDialogOpen(false);
+                }}>
                   info@dystinctlog-ss.us
                 </Button>
               </div>
@@ -340,14 +357,14 @@ const Index = () => {
           <Dialog open={isChatDialogOpen} onOpenChange={setIsChatDialogOpen}>
             <DialogContent className="max-w-md bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700">
               <DialogHeader>
-                <DialogTitle className="text-center text-xl font-bold text-white">Live Chat</DialogTitle>
+                <DialogTitle className="text-center text-xl font-bold text-white">Start Chat</DialogTitle>
               </DialogHeader>
               <div className="space-y-4">
-                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('https://t.me/+37376500222')}>
-                  Telegram Chat
-                </Button>
-                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('viber://chat?number=+37376500222')}>
-                  Viber Chat
+                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => {
+                  window.open('https://t.me/+37376500222');
+                  setIsChatDialogOpen(false);
+                }}>
+                  Open Telegram Chat
                 </Button>
               </div>
             </DialogContent>
