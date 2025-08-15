@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { AlignJustify, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
 
@@ -41,7 +41,7 @@ const Navigation = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="bg-transparent border-none hover:bg-transparent p-2"
       >
-        {isOpen ? <X className="h-16 w-16" /> : <Menu className="h-16 w-16" />}
+        {isOpen ? <X className="h-12 w-12" /> : <AlignJustify className="h-12 w-12" />}
       </Button>
 
       {isOpen && (
