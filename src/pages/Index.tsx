@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HeroSection } from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import dotMcLogo from "@/assets/dot-mc-logo.png";
@@ -366,14 +367,116 @@ const Index = () => {
       
       {/* FAQ Section */}
       <section id="faq" className="py-20 px-6 relative">
-        <div className="container mx-auto">
-          <div className="text-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-green-900/30 to-purple-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 via-transparent to-green-800/20" />
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-purple-900/30 to-slate-800" />
+        
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-tight mb-6">
               <span className="text-cyber-gradient">FAQ</span>
             </h2>
-            <p className="text-xl text-muted-foreground/60">
-              Frequently Asked Questions - Coming Soon
+            <p className="text-xl text-muted-foreground/60 max-w-3xl mx-auto">
+              Frequently Asked Questions about our logistics services
             </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">What services do you offer?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  We provide a full range of logistics services, including transportation management, freight forwarding, supply chain optimization, warehousing, and distribution. Our services are designed to meet the specific needs of our clients, ensuring timely and efficient delivery of goods.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">How can I contact customer support?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  You can contact our customer support team by:
+                  <br />• Email: info@dystinctlog-ss.us
+                  <br />• Phone: +1 (331) 454-9901 or +373 76500222
+                  <br />• Live Chat: Available 24/7 on our website via Telegram and Viber
+                  <br /><br />Our team is always ready to assist with any questions or concerns you may have.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">What is the average delivery time?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  The average delivery time depends on the destination and the type of service selected. Generally, domestic deliveries take 2-5 business days, while international deliveries may take 7-14 business days. For more specific timelines, please contact us with your delivery details.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">How do you ensure the safety of my cargo?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  We take cargo safety very seriously. We use high-quality packaging materials, GPS tracking for all shipments, and secure transportation methods to ensure your cargo reaches its destination safely. Additionally, we are fully insured to protect against any unforeseen circumstances.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">Can I track my shipment in real-time?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  Yes, we offer real-time tracking for all shipments. You can track your cargo using the tracking number provided once your shipment is dispatched. Simply visit our website and enter your tracking number in the tracking section.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">What should I do if there is a delay in my delivery?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  If there is a delay, please contact our customer support team immediately. We will investigate the cause of the delay and provide you with an updated delivery timeline. We strive to resolve any issues as quickly as possible.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">What regions do you cover?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  We provide logistics services across a wide range of regions, including domestic (within the country) and international destinations. For specific regions, please reach out to us for a more detailed coverage map.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">Do you offer international shipping?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  Yes, we offer international shipping to over 50 countries worldwide. Our international logistics solutions are tailored to meet the needs of each destination, with customs clearance, tracking, and delivery management included.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-9" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">How do I get a quote for my logistics needs?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  You can request a quote by filling out the form on our website or by contacting our sales team directly. We will ask for details about your shipment, such as the type of goods, destination, and preferred delivery times, in order to provide an accurate and competitive quote.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-10" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                  <span className="text-lg font-semibold text-cyber-gradient">What are your payment terms?</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                  Our payment terms vary depending on the service and contract agreement. Typically, we offer payment options such as credit card, bank transfer, or invoicing with payment due within 30 days. For specific payment terms, please contact our finance department or refer to your contract.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
