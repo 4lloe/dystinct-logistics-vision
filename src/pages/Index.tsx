@@ -282,7 +282,7 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsEmailDialogOpen(true)}>
                   Send Email
                 </Button>
               </CardContent>
@@ -295,7 +295,7 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Instant messaging with our support team via Telegram</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('https://t.me/+37376500222')}>
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsChatDialogOpen(true)}>
                   Start Chat
                 </Button>
               </CardContent>
@@ -335,16 +335,30 @@ const Index = () => {
 
           {/* Email Dialog */}
           <Dialog open={isEmailDialogOpen} onOpenChange={setIsEmailDialogOpen}>
-            <DialogContent className="max-w-md bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700">
+            <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10">
               <DialogHeader>
-                <DialogTitle className="text-center text-xl font-bold text-white">Email Us</DialogTitle>
+                <DialogTitle className="text-cyber-gradient text-center">Choose Email Address</DialogTitle>
               </DialogHeader>
-              <div className="space-y-4">
-                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => {
-                  window.open('mailto:info@dystinctlog-ss.us');
-                  setIsEmailDialogOpen(false);
-                }}>
-                  info@dystinctlog-ss.us
+              <div className="space-y-4 pt-4">
+                <Button 
+                  variant="ghost" 
+                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
+                  onClick={() => {
+                    window.open('mailto:info@dystinctlog-ss.us');
+                    setIsEmailDialogOpen(false);
+                  }}
+                >
+                  📧 info@dystinctlog-ss.us
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
+                  onClick={() => {
+                    window.open('mailto:support@dystinctlog-ss.us');
+                    setIsEmailDialogOpen(false);
+                  }}
+                >
+                  📧 support@dystinctlog-ss.us
                 </Button>
               </div>
             </DialogContent>
@@ -352,16 +366,30 @@ const Index = () => {
 
           {/* Chat Dialog */}
           <Dialog open={isChatDialogOpen} onOpenChange={setIsChatDialogOpen}>
-            <DialogContent className="max-w-md bg-gradient-to-br from-slate-900 to-slate-800 border-slate-700">
+            <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10">
               <DialogHeader>
-                <DialogTitle className="text-center text-xl font-bold text-white">Start Chat</DialogTitle>
+                <DialogTitle className="text-cyber-gradient text-center">Choose Telegram Number</DialogTitle>
               </DialogHeader>
-              <div className="space-y-4">
-                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => {
-                  window.open('https://t.me/+37376500222');
-                  setIsChatDialogOpen(false);
-                }}>
-                  Open Telegram Chat
+              <div className="space-y-4 pt-4">
+                <Button 
+                  variant="ghost" 
+                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
+                  onClick={() => {
+                    window.open('https://t.me/+13314549901');
+                    setIsChatDialogOpen(false);
+                  }}
+                >
+                  💬 Telegram 🇺🇸 +1 (331) 454-9901
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
+                  onClick={() => {
+                    window.open('https://t.me/+37376500222');
+                    setIsChatDialogOpen(false);
+                  }}
+                >
+                  💬 Telegram 🇲🇩 +373 76500222
                 </Button>
               </div>
             </DialogContent>
