@@ -7,22 +7,15 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { HeroSection } from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import dotMcLogo from "@/assets/dot-mc-logo.png";
-
 const Index = () => {
   const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
   const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
   const [isChatDialogOpen, setIsChatDialogOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
       {/* Logo and Navigation together on left */}
       <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
         <div className="w-20 h-20 bg-transparent">
-          <img 
-            src={dotMcLogo} 
-            alt="DOT MC Logo" 
-            className="w-full h-full object-contain"
-          />
+          <img src={dotMcLogo} alt="DOT MC Logo" className="w-full h-full object-contain" />
         </div>
         <Navigation />
       </div>
@@ -93,29 +86,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card hover:scale-105 transition-all duration-300">
-              <CardHeader className="text-center">
-                <MapPin className="w-12 h-12 mx-auto mb-4 text-orange-400" />
-                <CardTitle className="text-xl">ETA & Load Updates</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">
-                  Continuously monitor truck location and provide real-time updates on estimated pickup and delivery times.
-                </p>
-              </CardContent>
-            </Card>
+            
 
-            <Card className="glass-card hover:scale-105 transition-all duration-300">
-              <CardHeader className="text-center">
-                <Users className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-                <CardTitle className="text-xl">Broker Coordination</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-center">
-                  Facilitate communication with brokers, dispatchers, and warehouses to ensure seamless operations.
-                </p>
-              </CardContent>
-            </Card>
+            
           </div>
         </div>
       </section>
@@ -273,11 +246,7 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-sm text-muted-foreground mb-4">24/7 Support</p>
-                <Button 
-                  variant="ghost" 
-                  className="bg-white/10 text-white border border-white/20 hover:bg-white/20"
-                  onClick={() => setIsPhoneDialogOpen(true)}
-                >
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsPhoneDialogOpen(true)}>
                   Call now
                 </Button>
               </CardContent>
@@ -291,11 +260,7 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-sm text-muted-foreground mb-4">Quick Response</p>
-                <Button 
-                  variant="ghost" 
-                  className="bg-white/10 text-white border border-white/20 hover:bg-white/20"
-                  onClick={() => setIsEmailDialogOpen(true)}
-                >
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsEmailDialogOpen(true)}>
                   Send email
                 </Button>
               </CardContent>
@@ -309,11 +274,7 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-sm text-muted-foreground mb-4">Instant Messaging</p>
-                <Button 
-                  variant="ghost" 
-                  className="bg-white/10 text-white border border-white/20 hover:bg-white/20"
-                  onClick={() => setIsChatDialogOpen(true)}
-                >
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsChatDialogOpen(true)}>
                   Start chat
                 </Button>
               </CardContent>
@@ -327,16 +288,10 @@ const Index = () => {
                 <DialogTitle className="text-center text-xl font-bold text-white">Choose Phone Number</DialogTitle>
               </DialogHeader>
               <div className="space-y-4">
-                <Button 
-                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
-                  onClick={() => window.open('tel:+13314549901')}
-                >
+                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('tel:+13314549901')}>
                   Call us +1 (331) 454-9901
                 </Button>
-                <Button 
-                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
-                  onClick={() => window.open('tel:+37376500222')}
-                >
+                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('tel:+37376500222')}>
                   Call us +373 76500222
                 </Button>
               </div>
@@ -350,10 +305,7 @@ const Index = () => {
                 <DialogTitle className="text-center text-xl font-bold text-white">Email Us</DialogTitle>
               </DialogHeader>
               <div className="space-y-4">
-                <Button 
-                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
-                  onClick={() => window.open('mailto:info@dystinctlog-ss.us')}
-                >
+                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
                   info@dystinctlog-ss.us
                 </Button>
               </div>
@@ -367,16 +319,10 @@ const Index = () => {
                 <DialogTitle className="text-center text-xl font-bold text-white">Live Chat</DialogTitle>
               </DialogHeader>
               <div className="space-y-4">
-                <Button 
-                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
-                  onClick={() => window.open('https://t.me/+37376500222')}
-                >
+                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('https://t.me/+37376500222')}>
                   Telegram Chat
                 </Button>
-                <Button 
-                  className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium"
-                  onClick={() => window.open('viber://chat?number=+37376500222')}
-                >
+                <Button className="w-full h-12 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" onClick={() => window.open('viber://chat?number=+37376500222')}>
                   Viber Chat
                 </Button>
               </div>
@@ -431,8 +377,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
