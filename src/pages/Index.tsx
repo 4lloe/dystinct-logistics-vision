@@ -15,8 +15,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
-      {/* Logo on left, Navigation on right */}
-      <div className="fixed top-6 left-6 z-50">
+      {/* Logo and Navigation together on left */}
+      <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
         <div className="w-20 h-20 bg-transparent">
           <img 
             src={dotMcLogo} 
@@ -24,8 +24,6 @@ const Index = () => {
             className="w-full h-full object-contain"
           />
         </div>
-      </div>
-      <div className="fixed top-6 right-6 z-50">
         <Navigation />
       </div>
       
