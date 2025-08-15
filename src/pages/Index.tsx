@@ -226,21 +226,18 @@ const Index = () => {
               <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">DATA Q</CardTitle>
-                  <div className="text-2xl font-black text-white">$49</div>
                 </CardHeader>
               </Card>
               
               <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">IFTA</CardTitle>
-                  <div className="text-2xl font-black text-white">$89</div>
                 </CardHeader>
               </Card>
               
               <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">PERMITS</CardTitle>
-                  <div className="text-2xl font-black text-white">$199</div>
                 </CardHeader>
               </Card>
             </div>
