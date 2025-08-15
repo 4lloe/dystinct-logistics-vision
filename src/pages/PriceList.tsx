@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, MessageSquare, Video, CheckCircle, FileText, BarChart3, Shield } from "lucide-react";
+import { Phone, MessageSquare, Video, CheckCircle, FileText, BarChart3, Shield, Scale, Calculator } from "lucide-react";
 
 const ServiceCard = ({ 
   title, 
@@ -140,6 +140,48 @@ const PriceList = () => {
             auditFeatures={true}
             onGetStarted={() => navigate('/contact')}
           />
+        </div>
+
+        {/* Coming Soon Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-black uppercase tracking-tight mb-8 text-cyber-gradient">
+            Coming Soon
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <Card className="glass-card p-6 bg-background/5 backdrop-blur-md">
+              <CardHeader className="text-center">
+                <Scale className="w-12 h-12 mx-auto mb-3 text-purple-400" />
+                <CardTitle className="text-lg font-bold">DATA Q</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-2">
+                <p className="text-sm text-muted-foreground">Violation Dispute – $50.00</p>
+                <p className="text-sm text-muted-foreground">Out of Service violation – $200.00</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="glass-card p-6 bg-background/5 backdrop-blur-md">
+              <CardHeader className="text-center">
+                <FileText className="w-12 h-12 mx-auto mb-3 text-orange-400" />
+                <CardTitle className="text-lg font-bold">Permits</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-2">
+                <p className="text-sm text-muted-foreground">Regular: NY, NM, OR, KY – $15.00</p>
+                <p className="text-sm text-muted-foreground">Oversize/Overweight – $15.00</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="glass-card p-6 bg-background/5 backdrop-blur-md">
+              <CardHeader className="text-center">
+                <Calculator className="w-12 h-12 mx-auto mb-3 text-cyan-400" />
+                <CardTitle className="text-lg font-bold">IFTA</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-2">
+                <p className="text-sm text-muted-foreground">Registration – $100.00</p>
+                <p className="text-sm text-muted-foreground">Calculations – $20.00/unit/month</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Back Button */}

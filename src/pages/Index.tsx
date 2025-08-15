@@ -14,6 +14,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      {/* Navigation Lines and Company Name */}
+      <div className="absolute top-6 left-6 z-50">
+        <div className="flex items-center gap-4">
+          <div className="flex flex-col gap-1">
+            <div className="h-0.5 w-8 bg-cyan-400"></div>
+            <div className="h-0.5 w-6 bg-purple-400"></div>
+            <div className="h-0.5 w-4 bg-green-400"></div>
+          </div>
+          <div className="text-white font-bold text-lg tracking-wider">
+            DYSTINCT LOGBOOK S&S LLC
+          </div>
+        </div>
+      </div>
+      
       <Navigation />
       <div id="hero">
         <HeroSection />
@@ -119,51 +133,14 @@ const Index = () => {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {/* Service Icons */}
-            <div className="text-center">
-              <FileText className="w-16 h-16 mx-auto mb-4 text-blue-400" />
-              <h3 className="text-xl font-bold">DOT</h3>
-              <p className="text-green-400 font-semibold">New Entrant Safety Audits – starting at $99.00</p>
-            </div>
-            
-            <div className="text-center">
-              <Clock className="w-16 h-16 mx-auto mb-4 text-green-400" />
-              <h3 className="text-xl font-bold">ELD</h3>
-              <div className="text-muted-foreground">
-                <p>Hours of Service Regulation</p>
-                <p className="text-green-400 font-semibold">24/7 monitoring and support / Driver HOS Training – $130.00 for a unit/month</p>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <Scale className="w-16 h-16 mx-auto mb-4 text-purple-400" />
-              <h3 className="text-xl font-bold">DATA Q</h3>
-              <div className="text-muted-foreground">
-                <p className="text-green-400 font-semibold">Violation Dispute – $50.00 for a successfully-challenged violation</p>
-                <p className="text-green-400 font-semibold">Out of Service violation – $200.00 for a successfully-challenged OOS violation</p>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <FileText className="w-16 h-16 mx-auto mb-4 text-orange-400" />
-              <h3 className="text-xl font-bold">Permits</h3>
-              <div className="text-muted-foreground">
-                <p className="text-green-400 font-semibold">Regular: NY, NM, OR, KY – $15.00 per permit</p>
-                <p className="text-green-400 font-semibold">Oversize/Overweight – $15.00 per permit</p>
-              </div>
-            </div>
+          <div className="text-center mb-8">
+            <p className="text-xl text-muted-foreground/80 max-w-3xl mx-auto">
+              PROFESSIONAL SUPPORT AND SERVICES IN LOGISTICS
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-md mx-auto">
-            <div className="text-center">
-              <Calculator className="w-16 h-16 mx-auto mb-4 text-cyan-400" />
-              <h3 className="text-xl font-bold">IFTA</h3>
-              <div className="text-muted-foreground">
-                <p className="text-green-400 font-semibold">Registration – $100.00</p>
-                <p className="text-green-400 font-semibold">Calculations – $20.00 for a unit/month</p>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16 max-w-2xl mx-auto">
+            {/* Only keeping these services */}
           </div>
         </div>
       </section>

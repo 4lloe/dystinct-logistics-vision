@@ -72,11 +72,11 @@ export const HeroSection = () => {
           {/* Right Column - Stats Cards with Truck Background */}
           <div className="relative space-y-6">
             {/* Truck Background */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none select-none"
-              style={{ width: "1200px", height: "auto", opacity: 0.18 }}>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none select-none"
+              style={{ width: "1200px", height: "auto", opacity: 0.35 }}>
               <div
-                className="absolute inset-0 flex items-center justify-end z-0 pointer-events-none select-none"
-                style={{ opacity: 0.18 }}
+                className="absolute inset-0 flex items-center justify-end z-10 pointer-events-none select-none"
+                style={{ opacity: 0.35, filter: "brightness(1.4) contrast(1.2)" }}
               >
                 <img
                   src={truckImage}
@@ -89,7 +89,7 @@ export const HeroSection = () => {
             </div>
             
             {/* Stats Cards */}
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-20 space-y-6">
               <StatCard 
                 title="500+ Satisfied Drivers" 
                 glowColor="rgb(0, 207, 255)"
