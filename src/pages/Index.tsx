@@ -17,7 +17,7 @@ const Index = () => {
       <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
         <Navigation />
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-transparent">
+          <div className="w-3 h-3 bg-transparent">
             <img src={dotMcLogo} alt="DOT MC Logo" className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col">
