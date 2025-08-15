@@ -37,7 +37,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="glass-card hover:scale-105 transition-all duration-300">
               <CardHeader className="text-center">
                 <Clock className="w-12 h-12 mx-auto mb-4 text-green-400" />
