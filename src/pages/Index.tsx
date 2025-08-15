@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { HeroSection } from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
+import companyLogo from "@/assets/company-logo.png";
 
 const Index = () => {
   const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
@@ -14,9 +15,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
-      {/* Navigation Lines and Company Name */}
+      {/* Logo, Navigation Lines and Company Name */}
       <div className="absolute top-6 left-6 z-50">
         <div className="flex items-center gap-4">
+          <div className="w-12 h-12 bg-transparent">
+            <img 
+              src={companyLogo} 
+              alt="Company Logo" 
+              className="w-full h-full object-contain filter brightness-0 invert"
+            />
+          </div>
           <div className="flex flex-col gap-1">
             <div className="h-0.5 w-8 bg-cyan-400"></div>
             <div className="h-0.5 w-6 bg-purple-400"></div>
