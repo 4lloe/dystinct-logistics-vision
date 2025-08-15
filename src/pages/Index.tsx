@@ -218,6 +218,33 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Coming Soon Services */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-center text-cyber-gradient mb-8">Coming Soon</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">DATA Q</CardTitle>
+                  <div className="text-2xl font-black text-white">$49</div>
+                </CardHeader>
+              </Card>
+              
+              <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">IFTA</CardTitle>
+                  <div className="text-2xl font-black text-white">$89</div>
+                </CardHeader>
+              </Card>
+              
+              <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">PERMITS</CardTitle>
+                  <div className="text-2xl font-black text-white">$199</div>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
