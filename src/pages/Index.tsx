@@ -262,44 +262,41 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
               <CardHeader className="text-center pb-4">
                 <Phone className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
                 <CardTitle className="text-cyber-gradient">Phone Call</CardTitle>
                 <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-sm text-muted-foreground mb-4">24/7 Support</p>
                 <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsPhoneDialogOpen(true)}>
-                  Call now
+                  Call Now
                 </Button>
               </CardContent>
             </Card>
             
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
               <CardHeader className="text-center pb-4">
                 <Mail className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
                 <CardTitle className="text-cyber-gradient">Email Support</CardTitle>
                 <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-sm text-muted-foreground mb-4">Quick Response</p>
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsEmailDialogOpen(true)}>
-                  Send email
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
+                  Send Email
                 </Button>
               </CardContent>
             </Card>
             
-            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+            <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group cursor-pointer">
               <CardHeader className="text-center pb-4">
                 <MessageSquare className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
                 <CardTitle className="text-cyber-gradient">Live Chat</CardTitle>
                 <CardDescription className="text-muted-foreground/80">Instant messaging with our support team via Telegram</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-sm text-muted-foreground mb-4">Instant Messaging</p>
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsChatDialogOpen(true)}>
-                  Start chat
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('https://t.me/+37376500222')}>
+                  Start Chat
                 </Button>
               </CardContent>
             </Card>
@@ -370,11 +367,12 @@ const Index = () => {
             </DialogContent>
           </Dialog>
 
+          {/* Contact Information */}
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="glass-card bg-background/10 backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="text-cyber-gradient flex items-center gap-3">
-                  <Phone className="w-6 h-6" />
+                  <MapPin className="w-6 h-6" />
                   Office Location
                 </CardTitle>
               </CardHeader>
@@ -386,7 +384,7 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="glass-card bg-background/10 backdrop-blur-md">
               <CardHeader>
                 <CardTitle className="text-cyber-gradient flex items-center gap-3">
