@@ -44,7 +44,7 @@ const AboutUs = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Key Responsibilities</h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
               <Card className="glass-card hover:scale-105 transition-all duration-300">
                 <CardHeader className="text-center">
                   <Clock className="w-12 h-12 mx-auto mb-4 text-green-400" />
@@ -89,30 +89,6 @@ const AboutUs = () => {
                 <CardContent>
                   <p className="text-muted-foreground text-center">
                     Act as an intermediary when drivers face communication barriers due to language, signal issues, or other obstacles, ensuring smooth coordination.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="glass-card hover:scale-105 transition-all duration-300">
-                <CardHeader className="text-center">
-                  <MapPin className="w-12 h-12 mx-auto mb-4 text-orange-400" />
-                  <CardTitle className="text-xl">ETA & Load Updates</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center">
-                    Continuously monitor truck location and provide real-time updates on estimated pickup and delivery times.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="glass-card hover:scale-105 transition-all duration-300">
-                <CardHeader className="text-center">
-                  <Users className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-                  <CardTitle className="text-xl">Broker Coordination</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center">
-                    Facilitate communication with brokers, dispatchers, and warehouses to ensure seamless operations and coordination.
                   </p>
                 </CardContent>
               </Card>
