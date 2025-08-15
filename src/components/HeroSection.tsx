@@ -116,8 +116,8 @@ export const HeroSection = () => {
                 <div className="grid grid-cols-3 gap-4">
                   <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
                           style={{ background: 'var(--gradient-card)' }}
-                          onClick={() => scrollToSection('services')}>
-                    Our Services
+                          onClick={() => scrollToSection('about-us')}>
+                    Our Role
                   </Button>
                   <Button variant="default" size="lg" className="backdrop-blur-lg border border-white/10 text-foreground font-semibold"
                           style={{ background: 'var(--gradient-card)' }}
