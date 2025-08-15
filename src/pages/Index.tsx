@@ -16,8 +16,14 @@ const Index = () => {
       {/* Navigation and Logo */}
       <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
         <Navigation />
-        <div className="w-16 h-16 bg-transparent">
-          <img src={dotMcLogo} alt="DOT MC Logo" className="w-full h-full object-contain" />
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 bg-transparent">
+            <img src={dotMcLogo} alt="DOT MC Logo" className="w-full h-full object-contain" />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-white text-sm font-bold uppercase tracking-wide">Dystinct Logbook</span>
+            <span className="text-muted-foreground text-xs uppercase tracking-wider">S&S LLC</span>
+          </div>
         </div>
       </div>
       
