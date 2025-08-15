@@ -1,10 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AlignJustify, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const ourRoleSection = document.getElementById('about-us');
+      if (ourRoleSection) {
+        const rect = ourRoleSection.getBoundingClientRect();
+        setIsVisible(rect.top <= 100);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
@@ -34,7 +48,7 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className={`relative ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
       <Button
         variant="ghost"
         size="icon"
