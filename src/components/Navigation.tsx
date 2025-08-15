@@ -41,7 +41,7 @@ const Navigation = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="bg-transparent border-none hover:bg-transparent p-2"
       >
-        {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+        {isOpen ? <X className="h-16 w-16" /> : <Menu className="h-16 w-16" />}
       </Button>
 
       {isOpen && (

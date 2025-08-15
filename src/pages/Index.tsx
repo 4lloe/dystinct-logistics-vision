@@ -16,7 +16,7 @@ const Index = () => {
       {/* Navigation and Logo */}
       <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
         <Navigation />
-        <div className="w-28 h-28 bg-transparent mt-4">
+        <div className="w-16 h-16 bg-transparent">
           <img src={dotMcLogo} alt="DOT MC Logo" className="w-full h-full object-contain" />
         </div>
       </div>
