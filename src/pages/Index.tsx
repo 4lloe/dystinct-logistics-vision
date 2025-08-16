@@ -427,98 +427,128 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="item-1" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">Who can request our support and audit services?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  Our services are available to truck drivers, owner-operators, and carriers operating in the U.S. transportation industry. According to <strong>FMCSA regulations (49 CFR Part 395)</strong>, all carriers must maintain accurate records of duty status (RODS). We provide independent review and support to ensure compliance.
-                </AccordionContent>
-              </AccordionItem>
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* General Services & Eligibility */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-cyber-gradient border-b border-border/50 pb-3">
+                1. General Services & Eligibility
+              </h3>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">Who can request our support and audit services?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    Our services are available to truck drivers, owner-operators, and carriers operating in the U.S. transportation industry. According to <strong>FMCSA regulations (49 CFR Part 395)</strong>, all carriers must maintain accurate records of duty status (RODS). We provide independent review and support to ensure compliance.
+                  </AccordionContent>
+                </AccordionItem>
 
-              <AccordionItem value="item-2" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">Why should drivers or carriers use support services if they already have an ELD?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  An ELD records driving time automatically, but compliance requires more than data recording. Drivers must ensure records are accurate, certified, and supported by documentation. FMCSA (<strong>395.8 & 395.11</strong>) requires supporting documents, log certification, and proper edits. Our audits help detect errors before they become violations.
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem value="item-2" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">Why should drivers or carriers use support services if they already have an ELD?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    An ELD records driving time automatically, but compliance requires more than data recording. Drivers must ensure records are accurate, certified, and supported by documentation. FMCSA (<strong>395.8 & 395.11</strong>) requires supporting documents, log certification, and proper edits. Our audits help detect errors before they become violations.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
 
-              <AccordionItem value="item-3" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What is an ELD device?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  An ELD is an electronic device that automatically records driving time and engine data, ensuring compliance with FMCSA's Hours of Service rules. (<strong>49 CFR 395.20</strong>)
-                </AccordionContent>
-              </AccordionItem>
+            {/* ELD Compliance */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-cyber-gradient border-b border-border/50 pb-3">
+                2. ELD (Electronic Logging Device) Compliance
+              </h3>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-3" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">What is an ELD device?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    An ELD is an electronic device that automatically records driving time and engine data, ensuring compliance with FMCSA's Hours of Service rules. (<strong>49 CFR 395.20</strong>)
+                  </AccordionContent>
+                </AccordionItem>
 
-              <AccordionItem value="item-4" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">Who must comply with the ELD rule?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  Most drivers required to maintain RODS must use an ELD. Exceptions apply for short-haul operations, drivers operating pre-2000 vehicles, and certain driveaway-towaway operations. (<strong>395.8(a)(1)(iii)</strong>)
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem value="item-4" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">Who must comply with the ELD rule?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    Most drivers required to maintain RODS must use an ELD. Exceptions apply for short-haul operations, drivers operating pre-2000 vehicles, and certain driveaway-towaway operations. (<strong>395.8(a)(1)(iii)</strong>)
+                  </AccordionContent>
+                </AccordionItem>
 
-              <AccordionItem value="item-5" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What documentation must be onboard the vehicle?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  Drivers must carry: ELD user manual, instruction sheet for data transfer, instruction sheet for reporting malfunctions, and supply of paper logs for at least 8 days (<strong>395.22(h)</strong>)
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem value="item-5" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">What documentation must be onboard the vehicle?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    Drivers must carry: ELD user manual, instruction sheet for data transfer, instruction sheet for reporting malfunctions, and supply of paper logs for at least 8 days (<strong>395.22(h)</strong>)
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
 
-              <AccordionItem value="item-6" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What are the Hours of Service (HOS) limits for property-carrying drivers?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  <strong>11-hour driving limit</strong>: maximum of 11 hours driving after 10 consecutive hours off duty; <strong>14-hour rule</strong>: cannot drive beyond the 14th consecutive hour after coming on duty; <strong>30-minute break</strong>: required after 8 cumulative hours of driving; <strong>60/70-hour rule</strong>: may not drive after 60/70 hours on duty in 7/8 consecutive days (<strong>395.3</strong>)
-                </AccordionContent>
-              </AccordionItem>
+            {/* Hours of Service Compliance */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-cyber-gradient border-b border-border/50 pb-3">
+                3. Hours of Service (HOS) Compliance
+              </h3>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-6" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">What are the Hours of Service (HOS) limits for property-carrying drivers?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    <strong>11-hour driving limit</strong>: maximum of 11 hours driving after 10 consecutive hours off duty; <strong>14-hour rule</strong>: cannot drive beyond the 14th consecutive hour after coming on duty; <strong>30-minute break</strong>: required after 8 cumulative hours of driving; <strong>60/70-hour rule</strong>: may not drive after 60/70 hours on duty in 7/8 consecutive days (<strong>395.3</strong>)
+                  </AccordionContent>
+                </AccordionItem>
 
-              <AccordionItem value="item-7" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">How does the ELD help with HOS compliance?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  The ELD automatically records driving time and alerts drivers to approaching limits, reducing the risk of unintentional violations. (<strong>395.8 & 395.32</strong>)
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem value="item-7" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">How does the ELD help with HOS compliance?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    The ELD automatically records driving time and alerts drivers to approaching limits, reducing the risk of unintentional violations. (<strong>395.8 & 395.32</strong>)
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
 
-              <AccordionItem value="item-8" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What happens if the ELD malfunctions?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  Drivers must notify the carrier within 24 hours and reconstruct RODS on paper logs until the device is repaired or replaced (within 8 days). (<strong>395.34</strong>)
-                </AccordionContent>
-              </AccordionItem>
+            {/* FMCSA Audits & Inspections */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-cyber-gradient border-b border-border/50 pb-3">
+                4. FMCSA Audits & Inspections
+              </h3>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-8" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">What happens if the ELD malfunctions?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    Drivers must notify the carrier within 24 hours and reconstruct RODS on paper logs until the device is repaired or replaced (within 8 days). (<strong>395.34</strong>)
+                  </AccordionContent>
+                </AccordionItem>
 
-              <AccordionItem value="item-9" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">How do your audits help with FMCSA inspections?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  We verify that logs, ELD records, and supporting documents are consistent. This ensures readiness for compliance reviews and reduces risk of penalties. (<strong>395.11, 395.30</strong>)
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem value="item-9" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">How do your audits help with FMCSA inspections?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    We verify that logs, ELD records, and supporting documents are consistent. This ensures readiness for compliance reviews and reduces risk of penalties. (<strong>395.11, 395.30</strong>)
+                  </AccordionContent>
+                </AccordionItem>
 
-              <AccordionItem value="item-10" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">How do ELD and logbook data help in audits?</span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  FMCSA inspectors use ELD data to cross-check driving time, HOS compliance, and supporting documents. Clean and accurate logs speed up inspections and protect against violations. (<strong>395.24 & 395.32</strong>)
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+                <AccordionItem value="item-10" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
+                    <span className="text-lg font-semibold text-cyber-gradient">How do ELD and logbook data help in audits?</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    FMCSA inspectors use ELD data to cross-check driving time, HOS compliance, and supporting documents. Clean and accurate logs speed up inspections and protect against violations. (<strong>395.24 & 395.32</strong>)
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
         </div>
       </section>
