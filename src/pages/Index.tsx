@@ -558,10 +558,10 @@ const Index = () => {
                 © 2025 DYSTINCT LOGBOOK S&S LLC | All rights reserved
               </p>
               <div className="flex justify-center gap-6 text-sm">
-                <a href="#" className="text-cyber-gradient hover:text-cyber-gradient/80 transition-colors">
+                <a href="/privacy-policy" className="text-cyber-gradient hover:text-cyber-gradient/80 transition-colors">
                   Privacy Policy
                 </a>
-                <a href="#" className="text-cyber-gradient hover:text-cyber-gradient/80 transition-colors">
+                <a href="/terms-and-conditions" className="text-cyber-gradient hover:text-cyber-gradient/80 transition-colors">
                   Terms & Conditions
                 </a>
               </div>
