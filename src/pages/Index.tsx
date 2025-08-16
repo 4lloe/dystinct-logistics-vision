@@ -431,95 +431,91 @@ const Index = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="item-1" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What services do you offer?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">Who can request our support and audit services?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  We provide a full range of logistics services, including transportation management, freight forwarding, supply chain optimization, warehousing, and distribution. Our services are designed to meet the specific needs of our clients, ensuring timely and efficient delivery of goods.
+                  Our services are available to truck drivers, owner-operators, and carriers operating in the U.S. transportation industry. According to <strong>FMCSA regulations (49 CFR Part 395)</strong>, all carriers must maintain accurate records of duty status (RODS). We provide independent review and support to ensure compliance.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">How can I contact customer support?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">Why should drivers or carriers use support services if they already have an ELD?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  You can contact our customer support team by:
-                  <br />• Email: info@dystinctlog-ss.us
-                  <br />• Phone: +1 (331) 454-9901 or +373 76500222
-                  <br />• Live Chat: Available 24/7 on our website via Telegram and Viber
-                  <br /><br />Our team is always ready to assist with any questions or concerns you may have.
+                  An ELD records driving time automatically, but compliance requires more than data recording. Drivers must ensure records are accurate, certified, and supported by documentation. FMCSA (<strong>395.8 & 395.11</strong>) requires supporting documents, log certification, and proper edits. Our audits help detect errors before they become violations.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What is the average delivery time?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">What is an ELD device?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  The average delivery time depends on the destination and the type of service selected. Generally, domestic deliveries take 2-5 business days, while international deliveries may take 7-14 business days. For more specific timelines, please contact us with your delivery details.
+                  An ELD is an electronic device that automatically records driving time and engine data, ensuring compliance with FMCSA's Hours of Service rules. (<strong>49 CFR 395.20</strong>)
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">How do you ensure the safety of my cargo?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">Who must comply with the ELD rule?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  We take cargo safety very seriously. We use high-quality packaging materials, GPS tracking for all shipments, and secure transportation methods to ensure your cargo reaches its destination safely. Additionally, we are fully insured to protect against any unforeseen circumstances.
+                  Most drivers required to maintain RODS must use an ELD. Exceptions apply for short-haul operations, drivers operating pre-2000 vehicles, and certain driveaway-towaway operations. (<strong>395.8(a)(1)(iii)</strong>)
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">Can I track my shipment in real-time?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">What documentation must be onboard the vehicle?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  Yes, we offer real-time tracking for all shipments. You can track your cargo using the tracking number provided once your shipment is dispatched. Simply visit our website and enter your tracking number in the tracking section.
+                  Drivers must carry: ELD user manual, instruction sheet for data transfer, instruction sheet for reporting malfunctions, and supply of paper logs for at least 8 days (<strong>395.22(h)</strong>)
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-6" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What should I do if there is a delay in my delivery?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">What are the Hours of Service (HOS) limits for property-carrying drivers?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  If there is a delay, please contact our customer support team immediately. We will investigate the cause of the delay and provide you with an updated delivery timeline. We strive to resolve any issues as quickly as possible.
+                  <strong>11-hour driving limit</strong>: maximum of 11 hours driving after 10 consecutive hours off duty; <strong>14-hour rule</strong>: cannot drive beyond the 14th consecutive hour after coming on duty; <strong>30-minute break</strong>: required after 8 cumulative hours of driving; <strong>60/70-hour rule</strong>: may not drive after 60/70 hours on duty in 7/8 consecutive days (<strong>395.3</strong>)
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-7" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What regions do you cover?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">How does the ELD help with HOS compliance?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  We provide logistics services across a wide range of regions, including domestic (within the country) and international destinations. For specific regions, please reach out to us for a more detailed coverage map.
+                  The ELD automatically records driving time and alerts drivers to approaching limits, reducing the risk of unintentional violations. (<strong>395.8 & 395.32</strong>)
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-8" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">Do you offer international shipping?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">What happens if the ELD malfunctions?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  Yes, we offer international shipping to over 50 countries worldwide. Our international logistics solutions are tailored to meet the needs of each destination, with customs clearance, tracking, and delivery management included.
+                  Drivers must notify the carrier within 24 hours and reconstruct RODS on paper logs until the device is repaired or replaced (within 8 days). (<strong>395.34</strong>)
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-9" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">How do I get a quote for my logistics needs?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">How do your audits help with FMCSA inspections?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  You can request a quote by filling out the form on our website or by contacting our sales team directly. We will ask for details about your shipment, such as the type of goods, destination, and preferred delivery times, in order to provide an accurate and competitive quote.
+                  We verify that logs, ELD records, and supporting documents are consistent. This ensures readiness for compliance reviews and reduces risk of penalties. (<strong>395.11, 395.30</strong>)
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-10" className="glass-card bg-background/10 backdrop-blur-md border-0 rounded-lg overflow-hidden">
                 <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-white/5 transition-colors">
-                  <span className="text-lg font-semibold text-cyber-gradient">What are your payment terms?</span>
+                  <span className="text-lg font-semibold text-cyber-gradient">How do ELD and logbook data help in audits?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-muted-foreground">
-                  Our payment terms vary depending on the service and contract agreement. Typically, we offer payment options such as credit card, bank transfer, or invoicing with payment due within 30 days. For specific payment terms, please contact our finance department or refer to your contract.
+                  FMCSA inspectors use ELD data to cross-check driving time, HOS compliance, and supporting documents. Clean and accurate logs speed up inspections and protect against violations. (<strong>395.24 & 395.32</strong>)
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
