@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import { Home } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const TermsAndConditions = () => {
   return (
@@ -6,7 +8,18 @@ const TermsAndConditions = () => {
       <Navigation />
       
       <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <h1 className="text-4xl font-bold text-foreground mb-8">Terms and Conditions – Compliance & Audit Support</h1>
+        <div className="mb-6">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => window.location.href = '/'}
+            className="text-cyber-gradient hover:text-cyber-gradient/80 p-0"
+          >
+            <Home className="w-4 h-4 mr-2" />
+            Home
+          </Button>
+        </div>
+        <h1 className="text-4xl font-bold text-foreground mb-8">Terms and Conditions</h1>
         
         <div className="prose prose-lg max-w-none text-foreground/90 space-y-8">
           <section>

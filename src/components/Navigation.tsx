@@ -38,6 +38,14 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
+  const handleMenuItemClick = (item: any) => {
+    if (item.url) {
+      window.location.href = item.url;
+    } else {
+      scrollToSection(item.sectionId);
+    }
+  };
+
   const menuItems = [
     { label: "Home Page", sectionId: "hero" },
     { label: "About Us", sectionId: "about-us" },
@@ -45,6 +53,8 @@ const Navigation = () => {
     { label: "Pricelist", sectionId: "pricelist" },
     { label: "Contact Us", sectionId: "contact" },
     { label: "FAQ", sectionId: "faq" },
+    { label: "Privacy Policy", url: "/privacy-policy" },
+    { label: "Terms & Conditions", url: "/terms-and-conditions" },
   ];
 
   return (
@@ -59,20 +69,26 @@ const Navigation = () => {
       </Button>
 
       {isOpen && (
-        <div className="absolute top-12 left-0 bg-background/95 backdrop-blur-sm border border-border/50 rounded-lg shadow-lg min-w-48">
-          <div className="p-2">
-            {menuItems.map((item) => (
-              <Button
-                key={item.sectionId}
-                variant="ghost"
-                className="w-full justify-start mb-1 last:mb-0"
-                onClick={() => scrollToSection(item.sectionId)}
-              >
-                {item.label}
-              </Button>
-            ))}
+        <>
+          <div 
+            className="fixed inset-0 z-40" 
+            onClick={() => setIsOpen(false)}
+          />
+          <div className="absolute top-12 left-0 bg-background/95 backdrop-blur-sm border border-border/50 rounded-lg shadow-lg min-w-48 z-50">
+            <div className="p-2">
+              {menuItems.map((item) => (
+                <Button
+                  key={item.label}
+                  variant="ghost"
+                  className="w-full justify-start mb-1 last:mb-0"
+                  onClick={() => handleMenuItemClick(item)}
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

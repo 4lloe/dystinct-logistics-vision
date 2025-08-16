@@ -56,7 +56,7 @@ export const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-6xl lg:text-8xl font-black uppercase tracking-tight">
-                <span className="text-cyber-gradient">LOGISTIC</span>
+                <span className="text-cyber-gradient">LOGISTICS</span>
               </h1>
               <h2 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
                 <span className="text-cyber-gradient">SUPPORT AND SERVICES</span>
