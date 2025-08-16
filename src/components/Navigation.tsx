@@ -48,8 +48,7 @@ const Navigation = () => {
 
   const menuItems = [
     { label: "Home Page", sectionId: "hero" },
-    { label: "About Us", sectionId: "about-us" },
-    { label: "Our Services", sectionId: "our-services" },
+    { label: "Our Role", sectionId: "about-us" },
     { label: "Pricelist", sectionId: "pricelist" },
     { label: "Contact Us", sectionId: "contact" },
     { label: "FAQ", sectionId: "faq" },
