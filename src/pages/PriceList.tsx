@@ -53,7 +53,7 @@ const ServiceCard = ({
               </div>
               <div className="flex flex-col items-center gap-2 cursor-pointer">
                 <Video className="w-8 h-8 text-purple-400 hover:scale-125 transition-transform duration-300" />
-                <span className="text-xs text-muted-foreground">Viber</span>
+                <span className="text-xs text-muted-foreground">dialpad</span>
               </div>
             </div>
           </div>
