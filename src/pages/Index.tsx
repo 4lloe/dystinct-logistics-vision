@@ -178,23 +178,27 @@ const Index = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Comprehensive logistics audit</span>
+                    <span className="text-foreground/90">Expert Guidance on FMCSA Audit Requirements</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Performance analysis report</span>
+                    <span className="text-foreground/90">Efficient Document Organization and Preparation</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Cost optimization recommendations</span>
+                    <span className="text-foreground/90">Pre-Audit Assessment and Recommendations</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Compliance verification</span>
+                    <span className="text-foreground/90">Comprehensive Safety Record Review</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Detailed documentation</span>
+                    <span className="text-foreground/90">Driver Qualification File Management</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <span className="text-foreground/90">Vehicle Maintenance Record Optimization</span>
                   </div>
                 </div>
                 
