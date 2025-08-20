@@ -22,7 +22,7 @@ const Index = () => {
 
   const handleSendMessage = () => {
     const message = `Dear Dystinct Logbook S&S LLC, I'm interested in the ${selectedPlan} package. I want to start collaborating with your services.`;
-    const telegramUrl = `https://t.me/+37376500222?text=${encodeURIComponent(message)}`;
+    const telegramUrl = `https://t.me/37376500222?text=${encodeURIComponent(message)}`;
     window.open(telegramUrl, '_blank');
     setIsContactDialogOpen(false);
   };
@@ -141,15 +141,12 @@ const Index = () => {
               <CardContent>
                 {/* Full Width Pricing Table */}
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  {/* Basic Support */}
-                  <div 
-                    className="border border-cyan-400/20 rounded-lg p-6 bg-cyan-400/5 text-center cursor-pointer hover:scale-105 transition-all duration-300"
-                    onClick={() => handlePlanClick("Basic Support")}
-                  >
-                    <h4 className="text-2xl font-bold text-cyan-400 mb-2">Basic Support</h4>
+                  {/* Basic */}
+                  <div className="border border-cyan-400/20 rounded-lg p-6 bg-cyan-400/5 text-center">
+                    <h4 className="text-2xl font-bold text-cyan-400 mb-2">Basic</h4>
                     <div className="text-4xl font-black text-white mb-2">$99</div>
                     <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
-                    <div className="space-y-2 text-left">
+                    <div className="space-y-2 text-left mb-4">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-cyan-400" />
                         <span className="text-sm text-muted-foreground/90">24/7 support</span>
@@ -163,13 +160,16 @@ const Index = () => {
                         <span className="text-sm text-muted-foreground/90">Basic documentation</span>
                       </div>
                     </div>
+                    <Button 
+                      onClick={() => handlePlanClick("Basic")}
+                      className="w-full bg-cyan-400/20 text-cyan-400 border border-cyan-400/30 hover:bg-cyan-400/30"
+                    >
+                      Choose
+                    </Button>
                   </div>
 
                   {/* Standard */}
-                  <div 
-                    className="border border-green-400/20 rounded-lg p-8 bg-green-400/5 text-center transform scale-110 cursor-pointer hover:scale-115 transition-all duration-300"
-                    onClick={() => handlePlanClick("Standard")}
-                  >
+                  <div className="border border-green-400/20 rounded-lg p-8 bg-green-400/5 text-center transform scale-110">
                     <h4 className="text-2xl font-bold text-green-400 mb-2">Standard</h4>
                     <div className="mb-2">
                       <div className="text-2xl line-through text-muted-foreground/60">$129</div>
@@ -177,7 +177,7 @@ const Index = () => {
                       <div className="text-xs text-green-400 font-semibold">First 3 months</div>
                     </div>
                     <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
-                    <div className="space-y-2 text-left">
+                    <div className="space-y-2 text-left mb-4">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-green-400" />
                         <span className="text-sm text-muted-foreground/90">24/7 support</span>
@@ -191,18 +191,21 @@ const Index = () => {
                         <span className="text-sm text-muted-foreground/90">Daily logbook verification</span>
                       </div>
                     </div>
-                    <Badge className="mt-3 bg-green-400/20 text-green-400 border-green-400/30">PROMO</Badge>
+                    <Badge className="mb-3 bg-green-400/20 text-green-400 border-green-400/30">PROMO</Badge>
+                    <Button 
+                      onClick={() => handlePlanClick("Standard")}
+                      className="w-full bg-green-400/20 text-green-400 border border-green-400/30 hover:bg-green-400/30"
+                    >
+                      Choose
+                    </Button>
                   </div>
 
                   {/* Premium */}
-                  <div 
-                    className="border border-purple-400/20 rounded-lg p-6 bg-purple-400/5 text-center cursor-pointer hover:scale-105 transition-all duration-300"
-                    onClick={() => handlePlanClick("Premium")}
-                  >
+                  <div className="border border-purple-400/20 rounded-lg p-6 bg-purple-400/5 text-center">
                     <h4 className="text-2xl font-bold text-purple-400 mb-2">Premium</h4>
                     <div className="text-4xl font-black text-white mb-2">$179</div>
                     <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
-                    <div className="space-y-2 text-left">
+                    <div className="space-y-2 text-left mb-4">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-purple-400" />
                         <span className="text-sm text-muted-foreground/90">24/7 support</span>
@@ -220,6 +223,12 @@ const Index = () => {
                         <span className="text-sm text-muted-foreground/90">Monthly audits</span>
                       </div>
                     </div>
+                    <Button 
+                      onClick={() => handlePlanClick("Premium")}
+                      className="w-full bg-purple-400/20 text-purple-400 border border-purple-400/30 hover:bg-purple-400/30"
+                    >
+                      Choose
+                    </Button>
                   </div>
                 </div>
                 
@@ -435,7 +444,7 @@ const Index = () => {
                   variant="ghost" 
                   className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
                   onClick={() => {
-                    window.open('https://t.me/+37376500222');
+                    window.open('https://t.me/37376500222');
                     setIsChatDialogOpen(false);
                   }}
                 >
