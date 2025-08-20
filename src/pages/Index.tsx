@@ -259,49 +259,44 @@ const Index = () => {
 
           {/* Audit Services & Coming Soon - Side by Side */}
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Audit Services - Left Side */}
+            {/* Audit - Left Side */}
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-8">
-                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-6">Audit Services</CardTitle>
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-6">Audit</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-0">
-                {/* Price Section */}
-                <div className="text-center mb-8 p-6 rounded-lg bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-400/20">
-                  <div className="text-5xl font-black text-white mb-2">$99</div>
-                  <div className="text-lg text-muted-foreground/80">per unit</div>
+              <CardContent className="space-y-6">
+                {/* Price Section - DATA Q Format */}
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center">
+                  <div className="text-4xl font-black text-white mb-2">$99</div>
+                  <p className="text-sm text-muted-foreground/80">per unit</p>
                 </div>
 
-                {/* Services List */}
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-background/20 border border-white/10">
-                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0"></div>
-                    <span className="text-foreground/90 text-sm leading-relaxed">Expert Guidance on FMCSA Audit Requirements</span>
-                  </div>
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-background/20 border border-white/10">
-                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0"></div>
-                    <span className="text-foreground/90 text-sm leading-relaxed">Efficient Document Organization and Preparation</span>
-                  </div>
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-background/20 border border-white/10">
-                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0"></div>
-                    <span className="text-foreground/90 text-sm leading-relaxed">Pre-Audit Assessment and Recommendations</span>
+                {/* Services List - IFTA Format */}
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center">
+                  <div className="space-y-3 text-left">
+                    <p className="text-sm text-muted-foreground/90">Expert Guidance on FMCSA Audit Requirements</p>
+                    <p className="text-sm text-muted-foreground/90">Efficient Document Organization and Preparation</p>
+                    <p className="text-sm text-muted-foreground/90">Pre-Audit Assessment and Recommendations</p>
                   </div>
                 </div>
 
-                {/* Audit Tools */}
-                <div className="p-6 rounded-lg bg-gradient-to-r from-slate-900/40 to-gray-900/40 border border-white/10">
-                  <h4 className="text-lg font-semibold text-cyber-gradient mb-6 text-center">Audit Tools</h4>
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-4 rounded-lg bg-blue-400/10 border border-blue-400/20">
-                      <Shield className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                      <span className="text-sm text-blue-400 font-medium">Reports</span>
+                {/* Audit Tools - PERMITS Format */}
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center">
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <h4 className="text-lg font-bold text-purple-400">Audit Tools</h4>
+                  </div>
+                  <div className="flex justify-center gap-4">
+                    <div className="flex flex-col items-center gap-1">
+                      <Shield className="w-5 h-5 text-purple-400" />
+                      <span className="text-xs text-muted-foreground">Reports</span>
                     </div>
-                    <div className="text-center p-4 rounded-lg bg-orange-400/10 border border-orange-400/20">
-                      <Award className="w-8 h-8 text-orange-400 mx-auto mb-2" />
-                      <span className="text-sm text-orange-400 font-medium">Analytics</span>
+                    <div className="flex flex-col items-center gap-1">
+                      <Award className="w-5 h-5 text-purple-400" />
+                      <span className="text-xs text-muted-foreground">Analytics</span>
                     </div>
-                    <div className="text-center p-4 rounded-lg bg-red-400/10 border border-red-400/20">
-                      <Shield className="w-8 h-8 text-red-400 mx-auto mb-2" />
-                      <span className="text-sm text-red-400 font-medium">Security</span>
+                    <div className="flex flex-col items-center gap-1">
+                      <Shield className="w-5 h-5 text-purple-400" />
+                      <span className="text-xs text-muted-foreground">Security</span>
                     </div>
                   </div>
                 </div>
@@ -342,12 +337,6 @@ const Index = () => {
                     </div>
                     <p className="text-sm text-muted-foreground/80">Oversize & overweight permit acquisition and management</p>
                   </div>
-                </div>
-
-                <div className="text-center pt-4 border-t border-white/10">
-                  <Badge className="bg-gradient-to-r from-cyan-400/20 to-purple-400/20 text-cyber-gradient border-cyan-400/30">
-                    Coming Q2 2025
-                  </Badge>
                 </div>
               </CardContent>
             </Card>
