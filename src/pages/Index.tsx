@@ -418,7 +418,7 @@ const Index = () => {
                     setIsPhoneDialogOpen(false);
                   }}
                 >
-                  Call 🇺🇸 +1 (331) 454-9901
+                  🇺🇸 +1 (331) 454-9901
                 </Button>
                 <Button 
                   variant="ghost" 
@@ -428,7 +428,7 @@ const Index = () => {
                     setIsPhoneDialogOpen(false);
                   }}
                 >
-                  Call 🇲🇩 +373 76500222
+                  🇲🇩 +373 76500222
                 </Button>
               </div>
             </DialogContent>
