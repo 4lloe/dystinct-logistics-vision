@@ -268,10 +268,7 @@ const Index = () => {
               <CardContent className="space-y-6">
                 {/* Price Section - DATA Q Format */}
                 <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center h-[120px] flex flex-col justify-center">
-                  <div className="flex items-center justify-center gap-3 mb-2">
-                    <DollarSign className="w-6 h-6 text-blue-400" />
-                    <h4 className="text-xl font-bold text-blue-400">$99</h4>
-                  </div>
+                  <div className="text-4xl font-black text-white mb-2">$99</div>
                   <p className="text-sm text-muted-foreground/80">per unit</p>
                 </div>
 
