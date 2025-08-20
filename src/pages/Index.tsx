@@ -9,9 +9,6 @@ import { HeroSection } from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import dotMcLogo from "@/assets/dot-mc-logo.png";
 const Index = () => {
-  const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
-  const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
-  const [isChatDialogOpen, setIsChatDialogOpen] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
 
@@ -370,9 +367,14 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsPhoneDialogOpen(true)}>
-                  Call Now
-                </Button>
+                <div className="flex gap-2">
+                  <Button variant="ghost" className="flex-1 bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('tel:+13314549901')}>
+                    🇺🇸 Call
+                  </Button>
+                  <Button variant="ghost" className="flex-1 bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('tel:+37376500222')}>
+                    🇲🇩 Call
+                  </Button>
+                </div>
               </CardContent>
             </Card>
             
@@ -383,8 +385,8 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsEmailDialogOpen(true)}>
-                  Send Email
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
+                  📧 Send Email
                 </Button>
               </CardContent>
             </Card>
@@ -396,85 +398,12 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Instant messaging via Telegram</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsChatDialogOpen(true)}>
-                  Start Chat
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('https://t.me/37376500222')}>
+                  🇲🇩 Start Chat
                 </Button>
               </CardContent>
             </Card>
           </div>
-
-          {/* Phone Dialog */}
-          <Dialog open={isPhoneDialogOpen} onOpenChange={setIsPhoneDialogOpen}>
-            <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10">
-              <DialogHeader>
-                <DialogTitle className="text-cyber-gradient text-center">Choose Phone Number</DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4 pt-4">
-                <Button 
-                  variant="ghost" 
-                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
-                  onClick={() => {
-                    window.open('tel:+13314549901');
-                    setIsPhoneDialogOpen(false);
-                  }}
-                >
-                  🇺🇸 +1 (331) 454-9901
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
-                  onClick={() => {
-                    window.open('tel:+37376500222');
-                    setIsPhoneDialogOpen(false);
-                  }}
-                >
-                  🇲🇩 +373 76500222
-                </Button>
-              </div>
-            </DialogContent>
-          </Dialog>
-
-          {/* Email Dialog */}
-          <Dialog open={isEmailDialogOpen} onOpenChange={setIsEmailDialogOpen}>
-            <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10">
-              <DialogHeader>
-                <DialogTitle className="text-cyber-gradient text-center">Choose Email Address</DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4 pt-4">
-                <Button 
-                  variant="ghost" 
-                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
-                  onClick={() => {
-                    window.open('mailto:info@dystinctlog-ss.us');
-                    setIsEmailDialogOpen(false);
-                  }}
-                >
-                  📧 info@dystinctlog-ss.us
-                </Button>
-              </div>
-            </DialogContent>
-          </Dialog>
-
-          {/* Chat Dialog */}
-          <Dialog open={isChatDialogOpen} onOpenChange={setIsChatDialogOpen}>
-            <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10">
-              <DialogHeader>
-                <DialogTitle className="text-cyber-gradient text-center">Choose Telegram Number</DialogTitle>
-              </DialogHeader>
-              <div className="space-y-4 pt-4">
-                <Button 
-                  variant="ghost" 
-                  className="w-full bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white font-medium" 
-                  onClick={() => {
-                    window.open('https://t.me/37376500222');
-                    setIsChatDialogOpen(false);
-                  }}
-                >
-                  💬 Telegram 🇲🇩 +373 76500222
-                </Button>
-              </div>
-            </DialogContent>
-          </Dialog>
 
           {/* Plan Contact Dialog */}
           <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>

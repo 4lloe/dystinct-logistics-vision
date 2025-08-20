@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Phone, Mail, MessageSquare, MapPin, Clock } from "lucide-react";
 
 const ContactOption = ({ 
@@ -33,7 +32,6 @@ const ContactOption = ({
 };
 
 const Contact = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Dark gradient background */}
@@ -61,40 +59,14 @@ const Contact = () => {
               <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-                <DialogTrigger asChild>
-                  <Button variant="cyber" className="w-full text-white">
-                    Call Now
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10">
-                  <DialogHeader>
-                    <DialogTitle className="text-cyber-gradient text-center">Choose Phone Number</DialogTitle>
-                  </DialogHeader>
-                  <div className="space-y-4 pt-4">
-                    <Button 
-                      variant="cyber" 
-                      className="w-full text-white" 
-                      onClick={() => {
-                        window.open('tel:+13314549901');
-                        setIsDialogOpen(false);
-                      }}
-                    >
-                      🇺🇸 +1 (331) 454-9901
-                    </Button>
-                    <Button 
-                      variant="cyber" 
-                      className="w-full text-white" 
-                      onClick={() => {
-                        window.open('tel:+37376500222');
-                        setIsDialogOpen(false);
-                      }}
-                    >
-                      🇲🇩 +373 76500222
-                    </Button>
-                  </div>
-                </DialogContent>
-              </Dialog>
+              <div className="flex gap-2">
+                <Button variant="cyber" className="flex-1 text-white" onClick={() => window.open('tel:+13314549901')}>
+                  🇺🇸 Call
+                </Button>
+                <Button variant="cyber" className="flex-1 text-white" onClick={() => window.open('tel:+37376500222')}>
+                  🇲🇩 Call
+                </Button>
+              </div>
             </CardContent>
           </Card>
           
@@ -106,7 +78,7 @@ const Contact = () => {
             </CardHeader>
             <CardContent className="text-center">
               <Button variant="cyber" className="w-full text-white" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
-                Send Email
+                📧 Send Email
               </Button>
             </CardContent>
           </Card>
@@ -118,8 +90,8 @@ const Contact = () => {
               <CardDescription className="text-muted-foreground/80">Instant messaging via Telegram</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <Button variant="cyber" className="w-full text-white" onClick={() => window.open('https://t.me/+37376500222')}>
-                Start Chat
+              <Button variant="cyber" className="w-full text-white" onClick={() => window.open('https://t.me/37376500222')}>
+                🇲🇩 Start Chat
               </Button>
             </CardContent>
           </Card>
