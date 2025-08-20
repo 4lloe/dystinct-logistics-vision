@@ -191,31 +191,52 @@ const Index = () => {
             
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-2">Audits</CardTitle>
-                <div className="text-4xl font-black text-white mb-4">$99</div>
-                <CardDescription className="text-muted-foreground/80 text-lg">per unit</CardDescription>
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-6">Audit Services</CardTitle>
+                <CardDescription className="text-muted-foreground/80 text-lg">Professional compliance and safety audits</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6 flex-grow flex flex-col">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Expert Guidance on FMCSA Audit Requirements</span>
+                {/* Audit Services Table */}
+                <div className="space-y-6">
+                  {/* Basic Audit */}
+                  <div className="border border-white/10 rounded-lg p-4 bg-background/5">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="text-lg font-bold text-blue-400">Basic Audit</h4>
+                        <p className="text-sm text-muted-foreground/80">Expert guidance on FMCSA requirements + document preparation</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-black text-white">$99</div>
+                        <div className="text-xs text-muted-foreground">per unit</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Efficient Document Organization and Preparation</span>
+
+                  {/* Comprehensive Audit */}
+                  <div className="border border-orange-400/20 rounded-lg p-4 bg-orange-400/5">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="text-lg font-bold text-orange-400">Comprehensive</h4>
+                        <p className="text-sm text-muted-foreground/80">Full audit + safety record review + pre-audit assessment</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-black text-white">$149</div>
+                        <div className="text-xs text-muted-foreground">per unit</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Pre-Audit Assessment and Recommendations</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Comprehensive Safety Record Review</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Efficient Processing and Timely Submission of Requests</span>
+
+                  {/* Premium Audit */}
+                  <div className="border border-red-400/20 rounded-lg p-4 bg-red-400/5">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="text-lg font-bold text-red-400">Premium</h4>
+                        <p className="text-sm text-muted-foreground/80">Complete audit package + ongoing compliance support + priority processing</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-black text-white">$199</div>
+                        <div className="text-xs text-muted-foreground">per unit</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
