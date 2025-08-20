@@ -17,7 +17,11 @@ const Index = () => {
 
   const handlePlanClick = (planName: string) => {
     setSelectedPlan(planName);
-    setIsContactDialogOpen(true);
+    // Scroll to contact section
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleSendMessage = () => {
@@ -253,73 +257,94 @@ const Index = () => {
             </Card>
           </div>
 
-          {/* Audit Services - Full Width */}
-          <div className="max-w-6xl mx-auto">
+          {/* Audit Services & Coming Soon - Side by Side */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Audit Services - Left Side */}
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-4xl font-bold text-cyber-gradient mb-6">Audit Services</CardTitle>
-                <div className="text-5xl font-black text-white mb-2">$99</div>
-                <div className="text-xl text-muted-foreground/80 mb-4">per unit</div>
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-4">Audit Services</CardTitle>
+                <div className="text-4xl font-black text-white mb-2">$99</div>
+                <div className="text-lg text-muted-foreground/80 mb-4">per unit</div>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                    <span className="text-foreground/90 text-sm">Expert Guidance on FMCSA Audit Requirements</span>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                    <span className="text-foreground/90 text-sm leading-relaxed">Expert Guidance on FMCSA Audit Requirements</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                    <span className="text-foreground/90 text-sm">Efficient Document Organization and Preparation</span>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                    <span className="text-foreground/90 text-sm leading-relaxed">Efficient Document Organization and Preparation</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                    <span className="text-foreground/90 text-sm">Pre-Audit Assessment and Recommendations</span>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                    <span className="text-foreground/90 text-sm leading-relaxed">Pre-Audit Assessment and Recommendations</span>
                   </div>
                 </div>
                 
-                <div className="mt-8 text-center">
+                <div className="mt-8 text-center border-t border-white/10 pt-6">
                   <h4 className="text-sm font-semibold text-cyber-gradient mb-4">Audit Tools:</h4>
-                  <div className="flex justify-center gap-8">
+                  <div className="flex justify-center gap-6">
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-5 h-5 text-blue-400 hover:scale-125 transition-transform duration-300" />
+                      <Shield className="w-6 h-6 text-blue-400 hover:scale-125 transition-transform duration-300" />
                       <span className="text-xs text-muted-foreground">Reports</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Award className="w-5 h-5 text-orange-400 hover:scale-125 transition-transform duration-300" />
+                      <Award className="w-6 h-6 text-orange-400 hover:scale-125 transition-transform duration-300" />
                       <span className="text-xs text-muted-foreground">Analytics</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-5 h-5 text-red-400 hover:scale-125 transition-transform duration-300" />
+                      <Shield className="w-6 h-6 text-red-400 hover:scale-125 transition-transform duration-300" />
                       <span className="text-xs text-muted-foreground">Security</span>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Coming Soon Services */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center text-cyber-gradient mb-8">COMING SOON</h3>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">DATA Q</CardTitle>
-                </CardHeader>
-              </Card>
-              
-              <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">IFTA</CardTitle>
-                </CardHeader>
-              </Card>
-              
-              <Card className="glass-card p-6 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md opacity-80">
-                <CardHeader className="text-center pb-4">
-                  <CardTitle className="text-xl font-bold text-cyber-gradient mb-2">PERMITS</CardTitle>
-                </CardHeader>
-              </Card>
-            </div>
+            {/* Coming Soon Services - Right Side */}
+            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-4">Coming Soon</CardTitle>
+                <CardDescription className="text-muted-foreground/80 text-lg">Advanced logistics solutions in development</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="space-y-6">
+                  {/* DATA Q */}
+                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center">
+                    <div className="flex items-center justify-center gap-3 mb-2">
+                      <FileText className="w-6 h-6 text-blue-400" />
+                      <h4 className="text-xl font-bold text-blue-400">DATA Q</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground/80">DataQ challenge resolution system for CSA score improvement</p>
+                  </div>
+
+                  {/* IFTA */}
+                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center">
+                    <div className="flex items-center justify-center gap-3 mb-2">
+                      <Calculator className="w-6 h-6 text-green-400" />
+                      <h4 className="text-xl font-bold text-green-400">IFTA</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground/80">International Fuel Tax Agreement filing and reporting services</p>
+                  </div>
+
+                  {/* PERMITS */}
+                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center">
+                    <div className="flex items-center justify-center gap-3 mb-2">
+                      <Scale className="w-6 h-6 text-purple-400" />
+                      <h4 className="text-xl font-bold text-purple-400">PERMITS</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground/80">Oversize & overweight permit acquisition and management</p>
+                  </div>
+                </div>
+
+                <div className="text-center pt-4 border-t border-white/10">
+                  <Badge className="bg-gradient-to-r from-cyan-400/20 to-purple-400/20 text-cyber-gradient border-cyan-400/30">
+                    Coming Q2 2025
+                  </Badge>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
