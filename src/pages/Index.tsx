@@ -117,143 +117,140 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
+          {/* 24/7 Support Plans - Full Width */}
+          <div className="max-w-6xl mx-auto mb-16">
+            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-6">24/7 Support Plans</CardTitle>
-                <CardDescription className="text-muted-foreground/80 text-lg">Choose the right support level for your needs</CardDescription>
+                <CardTitle className="text-4xl font-bold text-cyber-gradient mb-6">24/7 Support Plans</CardTitle>
+                <CardDescription className="text-muted-foreground/80 text-lg">Choose the right support level for your business needs</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6 flex-grow flex flex-col">
-                {/* Pricing Table */}
-                <div className="space-y-6">
+              <CardContent>
+                {/* Full Width Pricing Table */}
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
                   {/* Basic Support */}
-                  <div className="border border-white/10 rounded-lg p-4 bg-background/5">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="text-lg font-bold text-cyan-400">Basic Support</h4>
-                        <p className="text-sm text-muted-foreground/80">24/7 support (phone, chat, email) + driver training</p>
+                  <div className="border border-cyan-400/20 rounded-lg p-6 bg-cyan-400/5 text-center">
+                    <h4 className="text-2xl font-bold text-cyan-400 mb-2">Basic Support</h4>
+                    <div className="text-4xl font-black text-white mb-2">$99</div>
+                    <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                        <span className="text-sm text-muted-foreground/90">24/7 support (phone, chat, email)</span>
                       </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-black text-white">$99</div>
-                        <div className="text-xs text-muted-foreground">per truck/month</div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                        <span className="text-sm text-muted-foreground/90">Driver training</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Standard */}
-                  <div className="border border-cyan-400/20 rounded-lg p-4 bg-cyan-400/5">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="text-lg font-bold text-cyan-400">Standard</h4>
-                        <p className="text-sm text-muted-foreground/80">24/7 support + driver training + daily logbook verification</p>
+                  <div className="border border-green-400/20 rounded-lg p-6 bg-green-400/5 text-center transform scale-105">
+                    <h4 className="text-2xl font-bold text-green-400 mb-2">Standard</h4>
+                    <div className="text-4xl font-black text-white mb-2">$129</div>
+                    <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-green-400" />
+                        <span className="text-sm text-muted-foreground/90">24/7 support (phone, chat, email)</span>
                       </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-black text-white">$129</div>
-                        <div className="text-xs text-muted-foreground">per truck/month</div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-green-400" />
+                        <span className="text-sm text-muted-foreground/90">Driver training</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-green-400" />
+                        <span className="text-sm text-muted-foreground/90">Daily logbook verification</span>
                       </div>
                     </div>
+                    <Badge className="mt-3 bg-green-400/20 text-green-400 border-green-400/30">Most Popular</Badge>
                   </div>
 
                   {/* Premium */}
-                  <div className="border border-purple-400/20 rounded-lg p-4 bg-purple-400/5">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="text-lg font-bold text-purple-400">Premium</h4>
-                        <p className="text-sm text-muted-foreground/80">24/7 support + driver training + daily logbook verification + monthly audits</p>
+                  <div className="border border-purple-400/20 rounded-lg p-6 bg-purple-400/5 text-center">
+                    <h4 className="text-2xl font-bold text-purple-400 mb-2">Premium</h4>
+                    <div className="text-4xl font-black text-white mb-2">$179</div>
+                    <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
+                    <div className="space-y-2 text-left">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-purple-400" />
+                        <span className="text-sm text-muted-foreground/90">24/7 support (phone, chat, email)</span>
                       </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-black text-white">$179</div>
-                        <div className="text-xs text-muted-foreground">per truck/month</div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-purple-400" />
+                        <span className="text-sm text-muted-foreground/90">Driver training</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-purple-400" />
+                        <span className="text-sm text-muted-foreground/90">Daily logbook verification</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-purple-400" />
+                        <span className="text-sm text-muted-foreground/90">Monthly audits</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-6">
-                  <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Available via:</h4>
-                  <div className="flex justify-center gap-6">
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-cyber-gradient mb-4">Available via:</h4>
+                  <div className="flex justify-center gap-8">
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Phone className="w-8 h-8 text-cyan-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Phone</span>
+                      <Phone className="w-10 h-10 text-cyan-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-sm text-muted-foreground">Phone</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <MessageSquare className="w-8 h-8 text-green-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Telegram</span>
+                      <MessageSquare className="w-10 h-10 text-green-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-sm text-muted-foreground">Telegram</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Phone className="w-8 h-8 text-purple-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Dialpad</span>
+                      <Phone className="w-10 h-10 text-purple-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-sm text-muted-foreground">Dialpad</span>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
-            
-            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
+          </div>
+
+          {/* Audit Services - Full Width */}
+          <div className="max-w-6xl mx-auto">
+            <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-6">Audit Services</CardTitle>
+                <CardTitle className="text-4xl font-bold text-cyber-gradient mb-6">Audit Services</CardTitle>
+                <div className="text-5xl font-black text-white mb-4">$99</div>
                 <CardDescription className="text-muted-foreground/80 text-lg">Professional compliance and safety audits</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6 flex-grow flex flex-col">
-                {/* Audit Services Table */}
-                <div className="space-y-6">
-                  {/* Basic Audit */}
-                  <div className="border border-white/10 rounded-lg p-4 bg-background/5">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="text-lg font-bold text-blue-400">Basic Audit</h4>
-                        <p className="text-sm text-muted-foreground/80">Expert guidance on FMCSA requirements + document preparation</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-black text-white">$99</div>
-                        <div className="text-xs text-muted-foreground">per unit</div>
-                      </div>
-                    </div>
+              <CardContent className="space-y-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                    <span className="text-foreground/90 text-lg">Expert Guidance on FMCSA Audit Requirements</span>
                   </div>
-
-                  {/* Comprehensive Audit */}
-                  <div className="border border-orange-400/20 rounded-lg p-4 bg-orange-400/5">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="text-lg font-bold text-orange-400">Comprehensive</h4>
-                        <p className="text-sm text-muted-foreground/80">Full audit + safety record review + pre-audit assessment</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-black text-white">$149</div>
-                        <div className="text-xs text-muted-foreground">per unit</div>
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                    <span className="text-foreground/90 text-lg">Efficient Document Organization and Preparation</span>
                   </div>
-
-                  {/* Premium Audit */}
-                  <div className="border border-red-400/20 rounded-lg p-4 bg-red-400/5">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h4 className="text-lg font-bold text-red-400">Premium</h4>
-                        <p className="text-sm text-muted-foreground/80">Complete audit package + ongoing compliance support + priority processing</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-black text-white">$199</div>
-                        <div className="text-xs text-muted-foreground">per unit</div>
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                    <span className="text-foreground/90 text-lg">Pre-Audit Assessment and Recommendations</span>
                   </div>
                 </div>
                 
-                <div className="mt-6">
-                  <h4 className="text-sm font-semibold text-cyber-gradient mb-3">Audit Tools:</h4>
-                  <div className="flex justify-center gap-6">
+                <div className="mt-8 text-center">
+                  <h4 className="text-lg font-semibold text-cyber-gradient mb-4">Audit Tools:</h4>
+                  <div className="flex justify-center gap-8">
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-8 h-8 text-blue-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Reports</span>
+                      <Shield className="w-10 h-10 text-blue-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-sm text-muted-foreground">Reports</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Award className="w-8 h-8 text-orange-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Analytics</span>
+                      <Award className="w-10 h-10 text-orange-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-sm text-muted-foreground">Analytics</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-8 h-8 text-red-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-xs text-muted-foreground">Security</span>
+                      <Shield className="w-10 h-10 text-red-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-sm text-muted-foreground">Security</span>
                     </div>
                   </div>
                 </div>
