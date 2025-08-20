@@ -141,13 +141,25 @@ const Index = () => {
                         <CheckCircle2 className="w-4 h-4 text-cyan-400" />
                         <span className="text-sm text-muted-foreground/90">Driver training</span>
                       </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                        <span className="text-sm text-muted-foreground/90">Basic documentation</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                        <span className="text-sm text-muted-foreground/90">Standard response time</span>
+                      </div>
                     </div>
                   </div>
 
                   {/* Standard */}
                   <div className="border border-green-400/20 rounded-lg p-6 bg-green-400/5 text-center transform scale-105">
                     <h4 className="text-2xl font-bold text-green-400 mb-2">Standard</h4>
-                    <div className="text-4xl font-black text-white mb-2">$129</div>
+                    <div className="mb-2">
+                      <div className="text-2xl line-through text-muted-foreground/60">$129</div>
+                      <div className="text-4xl font-black text-white">$99</div>
+                      <div className="text-xs text-green-400 font-semibold">First 3 months</div>
+                    </div>
                     <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
                     <div className="space-y-2 text-left">
                       <div className="flex items-center gap-2">
@@ -162,8 +174,12 @@ const Index = () => {
                         <CheckCircle2 className="w-4 h-4 text-green-400" />
                         <span className="text-sm text-muted-foreground/90">Daily logbook verification</span>
                       </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-green-400" />
+                        <span className="text-sm text-muted-foreground/90">Priority response time</span>
+                      </div>
                     </div>
-                    <Badge className="mt-3 bg-green-400/20 text-green-400 border-green-400/30">Most Popular</Badge>
+                    <Badge className="mt-3 bg-green-400/20 text-green-400 border-green-400/30">PROMO</Badge>
                   </div>
 
                   {/* Premium */}
@@ -188,6 +204,10 @@ const Index = () => {
                         <CheckCircle2 className="w-4 h-4 text-purple-400" />
                         <span className="text-sm text-muted-foreground/90">Monthly audits</span>
                       </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-purple-400" />
+                        <span className="text-sm text-muted-foreground/90">VIP priority response</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -196,15 +216,15 @@ const Index = () => {
                   <h4 className="text-lg font-semibold text-cyber-gradient mb-4">Available via:</h4>
                   <div className="flex justify-center gap-8">
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Phone className="w-10 h-10 text-cyan-400 hover:scale-125 transition-transform duration-300" />
+                      <Phone className="w-5 h-5 text-cyan-400 hover:scale-125 transition-transform duration-300" />
                       <span className="text-sm text-muted-foreground">Phone</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <MessageSquare className="w-10 h-10 text-green-400 hover:scale-125 transition-transform duration-300" />
+                      <MessageSquare className="w-5 h-5 text-green-400 hover:scale-125 transition-transform duration-300" />
                       <span className="text-sm text-muted-foreground">Telegram</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Phone className="w-10 h-10 text-purple-400 hover:scale-125 transition-transform duration-300" />
+                      <Phone className="w-5 h-5 text-purple-400 hover:scale-125 transition-transform duration-300" />
                       <span className="text-sm text-muted-foreground">Dialpad</span>
                     </div>
                   </div>
@@ -224,33 +244,33 @@ const Index = () => {
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                    <span className="text-foreground/90 text-lg">Expert Guidance on FMCSA Audit Requirements</span>
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    <span className="text-foreground/90 text-sm">Expert Guidance on FMCSA Audit Requirements</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                    <span className="text-foreground/90 text-lg">Efficient Document Organization and Preparation</span>
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    <span className="text-foreground/90 text-sm">Efficient Document Organization and Preparation</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                    <span className="text-foreground/90 text-lg">Pre-Audit Assessment and Recommendations</span>
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                    <span className="text-foreground/90 text-sm">Pre-Audit Assessment and Recommendations</span>
                   </div>
                 </div>
                 
                 <div className="mt-8 text-center">
-                  <h4 className="text-lg font-semibold text-cyber-gradient mb-4">Audit Tools:</h4>
+                  <h4 className="text-sm font-semibold text-cyber-gradient mb-4">Audit Tools:</h4>
                   <div className="flex justify-center gap-8">
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-10 h-10 text-blue-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-sm text-muted-foreground">Reports</span>
+                      <Shield className="w-5 h-5 text-blue-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Reports</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Award className="w-10 h-10 text-orange-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-sm text-muted-foreground">Analytics</span>
+                      <Award className="w-5 h-5 text-orange-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Analytics</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 cursor-pointer">
-                      <Shield className="w-10 h-10 text-red-400 hover:scale-125 transition-transform duration-300" />
-                      <span className="text-sm text-muted-foreground">Security</span>
+                      <Shield className="w-5 h-5 text-red-400 hover:scale-125 transition-transform duration-300" />
+                      <span className="text-xs text-muted-foreground">Security</span>
                     </div>
                   </div>
                 </div>
