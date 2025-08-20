@@ -449,7 +449,7 @@ const Index = () => {
                     setIsEmailDialogOpen(false);
                   }}
                 >
-                  📧 info@dystinctlog-ss.us
+                  info@dystinctlog-ss.us
                 </Button>
               </div>
             </DialogContent>
