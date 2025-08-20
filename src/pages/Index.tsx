@@ -370,7 +370,7 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Speak directly with our logistics specialists</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsPhoneDialogOpen(true)}>
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('tel:+37376500222')}>
                   Call Now
                 </Button>
               </CardContent>
@@ -383,7 +383,7 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Send us detailed inquiries and documentation</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsEmailDialogOpen(true)}>
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('mailto:info@dystinctlog-ss.us')}>
                   Send Email
                 </Button>
               </CardContent>
@@ -396,7 +396,7 @@ const Index = () => {
                 <CardDescription className="text-muted-foreground/80">Instant messaging via Telegram</CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => setIsChatDialogOpen(true)}>
+                <Button variant="ghost" className="bg-white/10 text-white border border-white/20 hover:bg-white/20" onClick={() => window.open('https://t.me/37376500222')}>
                   Start Chat
                 </Button>
               </CardContent>
