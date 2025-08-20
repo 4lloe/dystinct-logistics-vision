@@ -12,6 +12,20 @@ const Index = () => {
   const [isPhoneDialogOpen, setIsPhoneDialogOpen] = useState(false);
   const [isEmailDialogOpen, setIsEmailDialogOpen] = useState(false);
   const [isChatDialogOpen, setIsChatDialogOpen] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState("");
+
+  const handlePlanClick = (planName: string) => {
+    setSelectedPlan(planName);
+    setIsContactDialogOpen(true);
+  };
+
+  const handleSendMessage = () => {
+    const message = `Dear Dystinct Logbook S&S LLC, I'm interested in the ${selectedPlan} package. I want to start collaborating with your services.`;
+    const telegramUrl = `https://t.me/+37376500222?text=${encodeURIComponent(message)}`;
+    window.open(telegramUrl, '_blank');
+    setIsContactDialogOpen(false);
+  };
   return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
       {/* Navigation and Logo */}
       <div className="fixed top-6 left-6 z-50 flex items-center gap-4">
@@ -128,7 +142,10 @@ const Index = () => {
                 {/* Full Width Pricing Table */}
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   {/* Basic Support */}
-                  <div className="border border-cyan-400/20 rounded-lg p-6 bg-cyan-400/5 text-center">
+                  <div 
+                    className="border border-cyan-400/20 rounded-lg p-6 bg-cyan-400/5 text-center cursor-pointer hover:scale-105 transition-all duration-300"
+                    onClick={() => handlePlanClick("Basic Support")}
+                  >
                     <h4 className="text-2xl font-bold text-cyan-400 mb-2">Basic Support</h4>
                     <div className="text-4xl font-black text-white mb-2">$99</div>
                     <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
@@ -145,15 +162,14 @@ const Index = () => {
                         <CheckCircle2 className="w-4 h-4 text-cyan-400" />
                         <span className="text-sm text-muted-foreground/90">Basic documentation</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-                        <span className="text-sm text-muted-foreground/90">Standard response time</span>
-                      </div>
                     </div>
                   </div>
 
                   {/* Standard */}
-                  <div className="border border-green-400/20 rounded-lg p-6 bg-green-400/5 text-center transform scale-105">
+                  <div 
+                    className="border border-green-400/20 rounded-lg p-8 bg-green-400/5 text-center transform scale-110 cursor-pointer hover:scale-115 transition-all duration-300"
+                    onClick={() => handlePlanClick("Standard")}
+                  >
                     <h4 className="text-2xl font-bold text-green-400 mb-2">Standard</h4>
                     <div className="mb-2">
                       <div className="text-2xl line-through text-muted-foreground/60">$129</div>
@@ -174,16 +190,15 @@ const Index = () => {
                         <CheckCircle2 className="w-4 h-4 text-green-400" />
                         <span className="text-sm text-muted-foreground/90">Daily logbook verification</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-400" />
-                        <span className="text-sm text-muted-foreground/90">Priority response time</span>
-                      </div>
                     </div>
                     <Badge className="mt-3 bg-green-400/20 text-green-400 border-green-400/30">PROMO</Badge>
                   </div>
 
                   {/* Premium */}
-                  <div className="border border-purple-400/20 rounded-lg p-6 bg-purple-400/5 text-center">
+                  <div 
+                    className="border border-purple-400/20 rounded-lg p-6 bg-purple-400/5 text-center cursor-pointer hover:scale-105 transition-all duration-300"
+                    onClick={() => handlePlanClick("Premium")}
+                  >
                     <h4 className="text-2xl font-bold text-purple-400 mb-2">Premium</h4>
                     <div className="text-4xl font-black text-white mb-2">$179</div>
                     <div className="text-sm text-muted-foreground mb-4">per truck/month</div>
@@ -203,10 +218,6 @@ const Index = () => {
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-purple-400" />
                         <span className="text-sm text-muted-foreground/90">Monthly audits</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-purple-400" />
-                        <span className="text-sm text-muted-foreground/90">VIP priority response</span>
                       </div>
                     </div>
                   </div>
@@ -429,6 +440,31 @@ const Index = () => {
                   }}
                 >
                   💬 Telegram 🇲🇩 +373 76500222
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          {/* Plan Contact Dialog */}
+          <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+            <DialogContent className="glass-card bg-background/95 backdrop-blur-lg border border-white/10 max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-cyber-gradient text-center">Contact Us</DialogTitle>
+                <DialogDescription className="text-center text-muted-foreground">
+                  Send a message about the {selectedPlan} package
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-4 pt-4">
+                <div className="bg-background/20 rounded-lg p-4 border border-white/10">
+                  <p className="text-sm text-muted-foreground/90 leading-relaxed">
+                    Dear Dystinct Logbook S&S LLC, I&apos;m interested in the <span className="text-cyber-gradient font-semibold">{selectedPlan}</span> package. I want to start collaborating with your services.
+                  </p>
+                </div>
+                <Button 
+                  onClick={handleSendMessage}
+                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-medium"
+                >
+                  Send Message via Telegram
                 </Button>
               </div>
             </DialogContent>
