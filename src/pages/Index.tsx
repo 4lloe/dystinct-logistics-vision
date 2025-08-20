@@ -218,8 +218,8 @@ const Index = () => {
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-6">
                 <CardTitle className="text-4xl font-bold text-cyber-gradient mb-6">Audit Services</CardTitle>
-                <div className="text-5xl font-black text-white mb-4">$99</div>
-                <CardDescription className="text-muted-foreground/80 text-lg">Professional compliance and safety audits</CardDescription>
+                <div className="text-5xl font-black text-white mb-2">$99</div>
+                <div className="text-xl text-muted-foreground/80 mb-4">per unit</div>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
