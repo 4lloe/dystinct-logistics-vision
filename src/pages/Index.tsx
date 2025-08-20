@@ -261,31 +261,32 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Audit - Left Side */}
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-6">Audit</CardTitle>
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-4">Audit</CardTitle>
+                <div className="text-lg text-green-400 font-semibold">99.9% Accuracy</div>
               </CardHeader>
               <CardContent className="space-y-6">
                 {/* Price Section - DATA Q Format */}
-                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center">
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center min-h-[100px] flex flex-col justify-center">
                   <div className="text-4xl font-black text-white mb-2">$99</div>
                   <p className="text-sm text-muted-foreground/80">per unit</p>
                 </div>
 
                 {/* Services List - IFTA Format */}
-                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center">
-                  <div className="space-y-3 text-left">
-                    <p className="text-sm text-muted-foreground/90">Expert Guidance on FMCSA Audit Requirements</p>
-                    <p className="text-sm text-muted-foreground/90">Efficient Document Organization and Preparation</p>
-                    <p className="text-sm text-muted-foreground/90">Pre-Audit Assessment and Recommendations</p>
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center min-h-[100px] flex flex-col justify-center">
+                  <div className="space-y-2 text-left">
+                    <p className="text-sm text-muted-foreground/90">1. Expert Guidance on FMCSA Audit Requirements</p>
+                    <p className="text-sm text-muted-foreground/90">2. Efficient Document Organization and Preparation</p>
+                    <p className="text-sm text-muted-foreground/90">3. Pre-Audit Assessment and Recommendations</p>
                   </div>
                 </div>
 
                 {/* Audit Tools - PERMITS Format */}
-                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center">
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <h4 className="text-lg font-bold text-purple-400">Audit Tools</h4>
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center min-h-[100px] flex flex-col justify-center">
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <h4 className="text-xl font-bold text-purple-400">Audit Tools</h4>
                   </div>
-                  <div className="flex justify-center gap-4">
+                  <div className="flex justify-center gap-6">
                     <div className="flex flex-col items-center gap-1">
                       <Shield className="w-5 h-5 text-purple-400" />
                       <span className="text-xs text-muted-foreground">Reports</span>
@@ -312,7 +313,7 @@ const Index = () => {
               <CardContent className="space-y-6">
                 <div className="space-y-6">
                   {/* DATA Q */}
-                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center">
+                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center min-h-[100px] flex flex-col justify-center">
                     <div className="flex items-center justify-center gap-3 mb-2">
                       <FileText className="w-6 h-6 text-blue-400" />
                       <h4 className="text-xl font-bold text-blue-400">DATA Q</h4>
@@ -321,7 +322,7 @@ const Index = () => {
                   </div>
 
                   {/* IFTA */}
-                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center">
+                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center min-h-[100px] flex flex-col justify-center">
                     <div className="flex items-center justify-center gap-3 mb-2">
                       <Calculator className="w-6 h-6 text-green-400" />
                       <h4 className="text-xl font-bold text-green-400">IFTA</h4>
@@ -330,7 +331,7 @@ const Index = () => {
                   </div>
 
                   {/* PERMITS */}
-                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center">
+                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center min-h-[100px] flex flex-col justify-center">
                     <div className="flex items-center justify-center gap-3 mb-2">
                       <Scale className="w-6 h-6 text-purple-400" />
                       <h4 className="text-xl font-bold text-purple-400">PERMITS</h4>
