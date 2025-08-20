@@ -115,7 +115,7 @@ const Contact = () => {
             <CardHeader className="text-center pb-4">
               <MessageSquare className="w-12 h-12 mx-auto mb-4 text-cyber-gradient" />
               <CardTitle className="text-cyber-gradient">Live Chat</CardTitle>
-              <CardDescription className="text-muted-foreground/80">Instant messaging with our support team via Telegram</CardDescription>
+              <CardDescription className="text-muted-foreground/80">Instant messaging via Telegram</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
               <Button variant="cyber" className="w-full text-white" onClick={() => window.open('https://t.me/+37376500222')}>
