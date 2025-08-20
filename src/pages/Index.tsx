@@ -135,7 +135,7 @@ const Index = () => {
                     <div className="space-y-2 text-left">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-                        <span className="text-sm text-muted-foreground/90">24/7 support (phone, chat, email)</span>
+                        <span className="text-sm text-muted-foreground/90">24/7 support</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-cyan-400" />
@@ -152,7 +152,7 @@ const Index = () => {
                     <div className="space-y-2 text-left">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-green-400" />
-                        <span className="text-sm text-muted-foreground/90">24/7 support (phone, chat, email)</span>
+                        <span className="text-sm text-muted-foreground/90">24/7 support</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-green-400" />
@@ -174,7 +174,7 @@ const Index = () => {
                     <div className="space-y-2 text-left">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-purple-400" />
-                        <span className="text-sm text-muted-foreground/90">24/7 support (phone, chat, email)</span>
+                        <span className="text-sm text-muted-foreground/90">24/7 support</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-purple-400" />
