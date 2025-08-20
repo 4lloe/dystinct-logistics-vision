@@ -263,27 +263,31 @@ const Index = () => {
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group">
               <CardHeader className="text-center pb-6">
                 <CardTitle className="text-3xl font-bold text-cyber-gradient mb-4">Audit</CardTitle>
-                <div className="text-lg text-green-400 font-semibold">99.9% Accuracy</div>
+                <CardDescription className="text-muted-foreground/80 text-lg">99.9% Accuracy</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 {/* Price Section - DATA Q Format */}
-                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center min-h-[100px] flex flex-col justify-center">
-                  <div className="text-4xl font-black text-white mb-2">$99</div>
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center h-[120px] flex flex-col justify-center">
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <DollarSign className="w-6 h-6 text-blue-400" />
+                    <h4 className="text-xl font-bold text-blue-400">$99</h4>
+                  </div>
                   <p className="text-sm text-muted-foreground/80">per unit</p>
                 </div>
 
                 {/* Services List - IFTA Format */}
-                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center min-h-[100px] flex flex-col justify-center">
-                  <div className="space-y-2 text-left">
-                    <p className="text-sm text-muted-foreground/90">1. Expert Guidance on FMCSA Audit Requirements</p>
-                    <p className="text-sm text-muted-foreground/90">2. Efficient Document Organization and Preparation</p>
-                    <p className="text-sm text-muted-foreground/90">3. Pre-Audit Assessment and Recommendations</p>
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center h-[120px] flex flex-col justify-center">
+                  <div className="space-y-1 text-left">
+                    <p className="text-sm text-muted-foreground/80">1. Expert Guidance on FMCSA Audit Requirements</p>
+                    <p className="text-sm text-muted-foreground/80">2. Efficient Document Organization and Preparation</p>
+                    <p className="text-sm text-muted-foreground/80">3. Pre-Audit Assessment and Recommendations</p>
                   </div>
                 </div>
 
                 {/* Audit Tools - PERMITS Format */}
-                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center min-h-[100px] flex flex-col justify-center">
+                <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center h-[120px] flex flex-col justify-center">
                   <div className="flex items-center justify-center gap-3 mb-2">
+                    <Scale className="w-6 h-6 text-purple-400" />
                     <h4 className="text-xl font-bold text-purple-400">Audit Tools</h4>
                   </div>
                   <div className="flex justify-center gap-6">
@@ -312,32 +316,32 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-6">
-                  {/* DATA Q */}
-                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center min-h-[100px] flex flex-col justify-center">
-                    <div className="flex items-center justify-center gap-3 mb-2">
-                      <FileText className="w-6 h-6 text-blue-400" />
-                      <h4 className="text-xl font-bold text-blue-400">DATA Q</h4>
-                    </div>
-                    <p className="text-sm text-muted-foreground/80">DataQ challenge resolution system for CSA score improvement</p>
-                  </div>
+                   {/* DATA Q */}
+                   <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20 text-center h-[120px] flex flex-col justify-center">
+                     <div className="flex items-center justify-center gap-3 mb-2">
+                       <FileText className="w-6 h-6 text-blue-400" />
+                       <h4 className="text-xl font-bold text-blue-400">DATA Q</h4>
+                     </div>
+                     <p className="text-sm text-muted-foreground/80">DataQ challenge resolution system for CSA score improvement</p>
+                   </div>
 
-                  {/* IFTA */}
-                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center min-h-[100px] flex flex-col justify-center">
-                    <div className="flex items-center justify-center gap-3 mb-2">
-                      <Calculator className="w-6 h-6 text-green-400" />
-                      <h4 className="text-xl font-bold text-green-400">IFTA</h4>
-                    </div>
-                    <p className="text-sm text-muted-foreground/80">International Fuel Tax Agreement filing and reporting services</p>
-                  </div>
+                   {/* IFTA */}
+                   <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-green-900/20 to-emerald-900/20 text-center h-[120px] flex flex-col justify-center">
+                     <div className="flex items-center justify-center gap-3 mb-2">
+                       <Calculator className="w-6 h-6 text-green-400" />
+                       <h4 className="text-xl font-bold text-green-400">IFTA</h4>
+                     </div>
+                     <p className="text-sm text-muted-foreground/80">International Fuel Tax Agreement filing and reporting services</p>
+                   </div>
 
-                  {/* PERMITS */}
-                  <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center min-h-[100px] flex flex-col justify-center">
-                    <div className="flex items-center justify-center gap-3 mb-2">
-                      <Scale className="w-6 h-6 text-purple-400" />
-                      <h4 className="text-xl font-bold text-purple-400">PERMITS</h4>
-                    </div>
-                    <p className="text-sm text-muted-foreground/80">Oversize & overweight permit acquisition and management</p>
-                  </div>
+                   {/* PERMITS */}
+                   <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 text-center h-[120px] flex flex-col justify-center">
+                     <div className="flex items-center justify-center gap-3 mb-2">
+                       <Scale className="w-6 h-6 text-purple-400" />
+                       <h4 className="text-xl font-bold text-purple-400">PERMITS</h4>
+                     </div>
+                     <p className="text-sm text-muted-foreground/80">Oversize & overweight permit acquisition and management</p>
+                   </div>
                 </div>
               </CardContent>
             </Card>
