@@ -120,31 +120,52 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card className="glass-card p-8 hover:scale-105 transition-all duration-300 bg-background/10 backdrop-blur-md group h-full flex flex-col">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-2">Support 24/7</CardTitle>
-                <div className="text-4xl font-black text-white mb-4">$129</div>
-                <CardDescription className="text-muted-foreground/80 text-lg">per unit/month</CardDescription>
+                <CardTitle className="text-3xl font-bold text-cyber-gradient mb-6">24/7 Support Plans</CardTitle>
+                <CardDescription className="text-muted-foreground/80 text-lg">Choose the right support level for your needs</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6 flex-grow flex flex-col">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Round-the-clock customer support</span>
+                {/* Pricing Table */}
+                <div className="space-y-6">
+                  {/* Basic Support */}
+                  <div className="border border-white/10 rounded-lg p-4 bg-background/5">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="text-lg font-bold text-cyan-400">Basic Support</h4>
+                        <p className="text-sm text-muted-foreground/80">24/7 support (phone, chat, email) + driver training</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-black text-white">$99</div>
+                        <div className="text-xs text-muted-foreground">per truck/month</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Priority response time</span>
+
+                  {/* Standard */}
+                  <div className="border border-cyan-400/20 rounded-lg p-4 bg-cyan-400/5">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="text-lg font-bold text-cyan-400">Standard</h4>
+                        <p className="text-sm text-muted-foreground/80">24/7 support + driver training + daily logbook verification</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-black text-white">$129</div>
+                        <div className="text-xs text-muted-foreground">per truck/month</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Multi-channel communication</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Dedicated support team</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-400" />
-                    <span className="text-foreground/90">Real-time issue tracking</span>
+
+                  {/* Premium */}
+                  <div className="border border-purple-400/20 rounded-lg p-4 bg-purple-400/5">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h4 className="text-lg font-bold text-purple-400">Premium</h4>
+                        <p className="text-sm text-muted-foreground/80">24/7 support + driver training + daily logbook verification + monthly audits</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-black text-white">$179</div>
+                        <div className="text-xs text-muted-foreground">per truck/month</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
