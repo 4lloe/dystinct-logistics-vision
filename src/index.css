@@ -280,22 +280,52 @@
     height: auto;
   }
 
-  /* Logo mobile styles */
-  .logo-container img {
-    max-width: 40px; /* micșorează logo-ul */
-    height: auto;
+  /* Logo and company name mobile fixes */
+  
+  /* Fixed top navigation container for mobile */
+  .fixed.top-6.left-6 {
+    position: fixed !important;
+    top: 1rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: calc(100vw - 2rem) !important;
+    padding: 0 1rem !important;
+    justify-content: center !important;
+    margin-bottom: 10px !important;
   }
 
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* centrare pe ecran */
-    margin-bottom: 10px;
+  /* Logo container mobile adjustments */
+  .fixed .flex.items-center.gap-4 {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
   }
 
-  .site-title {
-    font-size: 14px; /* micșorează textul */
-    text-align: center;
+  /* Logo size - 50% reduction on mobile */
+  .fixed .w-8.h-8 img {
+    width: 16px !important; /* 50% of 32px (w-8 = 32px) */
+    height: 16px !important;
+  }
+
+  /* Company name mobile styling */
+  .fixed .text-white.text-sm {
+    font-size: 10px !important; /* Smaller font size for mobile */
+    text-align: center !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important; /* 10px spacing before headline */
+  }
+
+  /* Hero section adjustment for mobile to prevent overlap */
+  #hero {
+    padding-top: 80px !important; /* Add space for fixed header */
+  }
+
+  /* Main headline mobile adjustment */
+  .text-6xl.lg\\:text-8xl {
+    font-size: 2.5rem !important; /* Smaller on mobile */
+    margin-top: 10px !important; /* Ensure 10px spacing from company name */
   }
 
   /* Adjust glass cards for mobile */
