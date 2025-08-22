@@ -280,6 +280,59 @@
     height: auto;
   }
 
+  /* Logo and company name mobile fixes */
+  
+  /* Hide logo icon on mobile */
+  .logo-icon {
+    display: none;
+  }
+  
+  /* Fixed top navigation container for mobile */
+  .fixed.top-6.left-6 {
+    position: fixed !important;
+    top: 1rem !important;
+    left: 15px !important; /* 15px padding from left edge */
+    transform: none !important;
+    width: auto !important;
+    max-width: calc(100vw - 30px) !important; /* Account for 15px on both sides */
+    padding: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Logo container mobile adjustments - horizontal layout */
+  .fixed .flex.items-center.gap-4 {
+    flex-direction: row !important; /* Keep horizontal */
+    align-items: center !important;
+    gap: 10px !important; /* 8-12px spacing between logo and text */
+    width: auto !important;
+  }
+
+  /* Logo size - 50% reduction on mobile */
+  .fixed .w-8.h-8 img {
+    width: 16px !important; /* 50% of 32px (w-8 = 32px) */
+    height: 16px !important;
+  }
+
+  /* Company name mobile styling */
+  .fixed .text-white.text-sm {
+    font-size: 12px !important; /* Slightly smaller but readable */
+    text-align: left !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important; /* Remove extra margin */
+    white-space: nowrap !important; /* Prevent text wrapping */
+  }
+
+  /* Hero section adjustment for mobile to prevent overlap */
+  #hero {
+    padding-top: 80px !important; /* Add space for fixed header */
+  }
+
+  /* Main headline mobile adjustment */
+  .text-6xl.lg\\:text-8xl {
+    font-size: 2.5rem !important; /* Smaller on mobile */
+    margin-top: 10px !important; /* Ensure 10px spacing from company name */
+  }
+
   /* Adjust glass cards for mobile */
   .glass-card {
     @apply p-4 rounded-lg;
