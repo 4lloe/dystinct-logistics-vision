@@ -347,4 +347,15 @@
   .space-y-6 > * + * {
     margin-top: 1rem;
   }
+
+  /* Logistics header and text mobile centering */
+  .logistics-header {
+    text-align: center;
+    margin-top: 6mm;
+  }
+  
+  .logistics-text {
+    text-align: center;
+    margin-top: 6mm;
+  }
 }
