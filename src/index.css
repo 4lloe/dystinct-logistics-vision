@@ -282,6 +282,11 @@
 
   /* Logo and company name mobile fixes */
   
+  /* Hide logo icon on mobile */
+  .logo-icon {
+    display: none;
+  }
+  
   /* Fixed top navigation container for mobile */
   .fixed.top-6.left-6 {
     position: fixed !important;
