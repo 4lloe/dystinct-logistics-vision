@@ -264,3 +264,39 @@
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 8px #fff, 0 0 12px hsl(var(--primary)), 0 0 18px hsl(var(--primary)), 0 0 25px hsl(var(--primary));
   }
 }
+
+/* Mobile responsive styles */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .header img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust glass cards for mobile */
+  .glass-card {
+    @apply p-4 rounded-lg;
+  }
+
+  /* Make buttons smaller on mobile */
+  .btn-cyber,
+  .btn-cyber-secondary {
+    @apply px-6 py-3 text-sm;
+  }
+
+  /* Reduce spacing for mobile */
+  .space-y-8 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  .space-y-6 > * + * {
+    margin-top: 1rem;
+  }
+}
