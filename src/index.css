@@ -280,6 +280,24 @@
     height: auto;
   }
 
+  /* Logo mobile styles */
+  .logo-container img {
+    max-width: 40px; /* micșorează logo-ul */
+    height: auto;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centrare pe ecran */
+    margin-bottom: 10px;
+  }
+
+  .site-title {
+    font-size: 14px; /* micșorează textul */
+    text-align: center;
+  }
+
   /* Adjust glass cards for mobile */
   .glass-card {
     @apply p-4 rounded-lg;
