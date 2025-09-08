@@ -62,7 +62,7 @@ export const HeroSection = () => {
                 <span className="text-cyber-gradient">SUPPORT AND SERVICES</span>
               </h2>
               <p className="text-2xl font-geist font-light max-w-lg text-muted-foreground">
-                Your trusted partner for seamless transportation and supply chain management.
+                Your safety, your compliance, your audit confidence.
               </p>
             </div>
             
